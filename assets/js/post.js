@@ -107,7 +107,18 @@ async function main() {
     if (!mdPath.startsWith('/')) mdPath = '/' + mdPath.replace(/^\/+/, '');
 
     const md = await loadText(mdPath);
-    document.getElementById('content').innerHTML = mdToHtml(md);
+    const contentEl = document.getElementById('content');
+    contentEl.innerHTML = mdToHtml(md);
+
+    // trigger Prism highlighting if available (scoped to the post content)
+    if (window.Prism) {
+        if (typeof window.Prism.highlightAllUnder === 'function') {
+            window.Prism.highlightAllUnder(contentEl);
+        } else if (typeof window.Prism.highlightAll === 'function') {
+            window.Prism.highlightAll();
+        }
+    }
+    if (window.Prism) Prism.highlightAll();
 }
 
 main().catch(err => {
