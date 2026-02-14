@@ -1,5 +1,3 @@
-# Lidando com parâmetros opcionais em Go
-
 Conteúdo de exemplo — substitua por seu artigo real.
 
 Você pode incluir snippets, listas e imagens normalmente.
