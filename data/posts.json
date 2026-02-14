@@ -5,7 +5,8 @@
         "date": "2025-08-31",
         "category": "Go",
         "excerpt": "Uma introdução prática aos generics em Go, com exemplos e armadilhas comuns.",
-        "file": "posts/descomplicando-generics.html"
+        "file": "posts/descomplicando-generics.html",
+        "md": "posts/descomplicando-generics.md"
     },
     {
         "id": "parametros-opcionais",
@@ -13,6 +14,7 @@
         "date": "2025-05-12",
         "category": "Go",
         "excerpt": "Padrões e alternativas para simular parâmetros opcionais em funções Go.",
-        "file": "posts/parametros-opcionais.html"
+        "file": "posts/parametros-opcionais.html",
+        "md": "posts/parametros-opcionais.md"
     }
 ]
