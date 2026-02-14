@@ -114,4 +114,5 @@ main().catch(err => {
     console.error(err);
     const content = document.getElementById('content');
     if (content) content.innerHTML = `<div class="card">Erro: ${err.message}</div>`;
+    if (window.Prism) Prism.highlightAll();
 });

@@ -1,5 +1,3 @@
-# Descomplicando generics
-
 Coloque aqui o HTML do post **"Descomplicando generics"**. Este arquivo é o conteúdo canônico do post.
 
 Exemplo: explicação breve, código, pontos importantes e conclusão.
