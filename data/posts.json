@@ -5,6 +5,7 @@
         "date": "2025-08-31",
         "category": "Go",
         "excerpt": "Uma introdução prática aos generics em Go, com exemplos e armadilhas comuns.",
+        "author": "Artur Benzi Baccarin",
         "file": "posts/descomplicando-generics.html",
         "md": "posts/descomplicando-generics.md"
     },
@@ -14,6 +15,7 @@
         "date": "2025-05-12",
         "category": "Go",
         "excerpt": "Padrões e alternativas para simular parâmetros opcionais em funções Go.",
+        "author": "Artur Benzi Baccarin",
         "file": "posts/parametros-opcionais.html",
         "md": "posts/parametros-opcionais.md"
     }

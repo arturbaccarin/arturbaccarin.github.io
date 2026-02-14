@@ -100,7 +100,7 @@ async function main() {
 
     document.title = post.title;
     document.getElementById('title').textContent = post.title;
-    document.getElementById('meta').innerHTML = `\n    <span>${post.date}</span>\n    <span class="badge">${post.category}</span>\n  `;
+    document.getElementById('meta').innerHTML = `\n    Escrito por ${escapeHtml(post.author || 'Autor desconhecido')} em <span>${post.date}</span>\n    <span class="badge">${post.category}</span>\n  `;
 
     // determine markdown source: explicit `md` in posts.json -> derived /posts/<id>.md -> fallback replace .html
     let mdPath = post.md || `/posts/${id}.md`;
