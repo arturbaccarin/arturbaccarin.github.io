@@ -31,6 +31,26 @@ function escapeHtml(s) {
     return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 }
 
+// parse DD-MM-YYYY, DD/MM/YYYY or YYYY-MM-DD (fallback to Date)
+function parseDateString(s) {
+    if (!s) return null;
+    const ymd = s.match(/^(\d{4})-(\d{2})-(\d{2})$/);
+    if (ymd) return new Date(Number(ymd[1]), Number(ymd[2]) - 1, Number(ymd[3]));
+    const dmyHyphen = s.match(/^(\d{2})-(\d{2})-(\d{4})$/);
+    if (dmyHyphen) return new Date(Number(dmyHyphen[3]), Number(dmyHyphen[2]) - 1, Number(dmyHyphen[1]));
+    const dmySlash = s.match(/^(\d{2})\/(\d{2})\/(\d{4})$/);
+    if (dmySlash) return new Date(Number(dmySlash[3]), Number(dmySlash[2]) - 1, Number(dmySlash[1]));
+    const d = new Date(s);
+    return isNaN(d) ? null : d;
+}
+
+function formatDatePt(s) {
+    const d = parseDateString(s);
+    if (!d) return s || '';
+    const months = ['janeiro', 'fevereiro', 'março', 'abril', 'maio', 'junho', 'julho', 'agosto', 'setembro', 'outubro', 'novembro', 'dezembro'];
+    return `${d.getDate()} de ${months[d.getMonth()]} de ${d.getFullYear()}`;
+}
+
 function mdToHtml(md) {
     if (!md) return '';
 
@@ -100,7 +120,7 @@ async function main() {
 
     document.title = post.title;
     document.getElementById('title').textContent = post.title;
-    document.getElementById('meta').innerHTML = `\n    Escrito por ${escapeHtml(post.author || 'Autor desconhecido')} em <span>${post.date}</span>\n    <span class="badge">${post.category}</span>\n  `;
+    document.getElementById('meta').innerHTML = `\n    Escrito por ${escapeHtml(post.author || 'Autor desconhecido')} em <span>${formatDatePt(post.date)}</span>\n    <span class="badge">${post.category}</span>\n  `;
 
     // determine markdown source: explicit `md` in posts.json -> derived /posts/<id>.md -> fallback replace .html
     let mdPath = post.md || `/posts/${id}.md`;
