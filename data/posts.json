@@ -48,5 +48,15 @@
         "author": "Artur Baccarin",
         "file": "posts/antes-do-main-existe-o-init.html",
         "md": "posts/antes-do-main-existe-o-init.md"
+    },
+    {
+        "id": "microsservicos-dividir-para-conquistar-ou-complicar",
+        "title": "Microsserviços: dividir para conquistar ou complicar?",
+        "date": "09-07-2025",
+        "category": "Arquitetura de software",
+        "excerpt": "Entenda os benefícios e desafios do uso de microsserviços.",
+        "author": "Artur Baccarin",
+        "file": "posts/microsservicos-dividir-para-conquistar-ou-complicar.html",
+        "md": "posts/microsservicos-dividir-para-conquistar-ou-complicar.md"
     }
 ]

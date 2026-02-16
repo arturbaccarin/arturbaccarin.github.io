@@ -61,8 +61,27 @@ function mdToHtml(md) {
         return `\u0000CODEBLOCK_${idx}\u0000`;
     });
 
+    // preserve blockquotes BEFORE escapeHtml (because ">" becomes "&gt;")
+    const quoteBlocks = [];
+    md = md.replace(/(^|\n)([ \t]*>(?:[^\n]*)(?:\n[ \t]*>[^\n]*)*)/g, function (_, lead, quoteBlock) {
+        const idx = quoteBlocks.push(quoteBlock) - 1;
+        return `${lead}\u0000QUOTE_${idx}\u0000`;
+    });
+
     // escape the rest
     md = escapeHtml(md);
+
+    // restore blockquotes (escaped inside)
+    md = md.replace(/\u0000QUOTE_(\d+)\u0000/g, function (_, idx) {
+        const raw = quoteBlocks[Number(idx)] || '';
+        const lines = raw
+            .split('\n')
+            .map(l => l.replace(/^[ \t]*>\s?/, '')); // remove "> "
+
+        // escapa o conteúdo do quote (segurança), mas mantém <br>
+        const safe = lines.map(escapeHtml).join('<br>');
+        return `<blockquote>${safe}</blockquote>`;
+    });
 
     // headings
     md = md.replace(/^######\s*(.*)$/gm, '<h6>$1</h6>');
@@ -74,6 +93,16 @@ function mdToHtml(md) {
 
     // horizontal rule
     md = md.replace(/^---$/gm, '<hr>');
+
+    // 🔥 blockquotes
+    md = md.replace(/(^|\n)(>>(?:[^\n]*\n?)+)/g, function (_, lead, quoteBlock) {
+        const lines = quoteBlock
+            .trim()
+            .split('\n')
+            .map(l => l.replace(/^>\s?/, '').trim());
+
+        return '\n<blockquote>' + lines.join('<br>') + '</blockquote>\n';
+    });
 
     // ✅ lists (nested: ul/ol based on indentation)
     function indentWidth(ws) {
