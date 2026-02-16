@@ -2,7 +2,7 @@
     {
         "id": "o-que-sao-padroes-de-projeto-e-para-que-servem",
         "title": "O que são padrões de projeto e para que servem?",
-        "date": "03-06-2025",
+        "date": "03-07-2025",
         "category": "Arquitetura de software",
         "excerpt": "Entenda o que são padrões de projeto, suas características fundamentais, relações e como eles ajudam na tomada de decisões arquiteturais.",
         "author": "Artur Baccarin",
@@ -12,7 +12,7 @@
     {
         "id": "voce-conhece-o-sombreamento-em-go",
         "title": "Você conhece o sombreamento em Go?",
-        "date": "03-06-2025",
+        "date": "04-07-2025",
         "category": "Go",
         "excerpt": "Entenda o que é sombreamento (shadowing) em Go e como ele pode afetar seu código.",
         "author": "Artur Baccarin",
@@ -38,5 +38,15 @@
         "author": "Artur Baccarin",
         "file": "posts/a-linha-invisivel-que-guia-seu-codigo.html",
         "md": "posts/a-linha-invisivel-que-guia-seu-codigo.md"
+    },
+    {
+        "id": "antes-do-main-existe-o-init",
+        "title": "Antes do main existe o init",
+        "date": "06-07-2025",
+        "category": "Go",
+        "excerpt": "Entenda o conceito de init em Go e como ele pode afetar o comportamento do seu programa.",
+        "author": "Artur Baccarin",
+        "file": "posts/antes-do-main-existe-o-init.html",
+        "md": "posts/antes-do-main-existe-o-init.md"
     }
 ]
