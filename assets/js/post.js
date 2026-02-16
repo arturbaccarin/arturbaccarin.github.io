@@ -1,17 +1,17 @@
 /* post loader: suporta carregar Markdown + metadata via /data/posts.json */
 
+import { mdToHtml, escapeHtml } from './mdToHtml.js';
+
 function slugFromPath() {
     const parts = window.location.pathname.split('/').filter(Boolean);
     if (!parts.length) return null;
     const last = parts[parts.length - 1];
-    // accept both /posts/slug and /posts/slug.html
     if (last.endsWith('.html')) return last.replace(/\.html$/, '');
     if (!last.includes('.')) return last;
     return null;
 }
 
 function getId() {
-    // prioridade: /posts/<slug>.html (path) -> ?id= fallback
     return slugFromPath() || new URLSearchParams(window.location.search).get('id');
 }
 
@@ -25,10 +25,6 @@ async function loadText(path) {
     const res = await fetch(path);
     if (!res.ok) throw new Error('Não consegui carregar: ' + path);
     return await res.text();
-}
-
-function escapeHtml(s) {
-    return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 }
 
 // parse DD-MM-YYYY, DD/MM/YYYY or YYYY-MM-DD (fallback to Date)
@@ -51,180 +47,6 @@ function formatDatePt(s) {
     return `${d.getDate()} de ${months[d.getMonth()]} de ${d.getFullYear()}`;
 }
 
-function mdToHtml(md) {
-    if (!md) return '';
-
-    // preserve fenced code blocks first
-    const codeBlocks = [];
-    md = md.replace(/```[ \t]*([^\n`]*)\r?\n([\s\S]*?)```/g, function (_, lang, code) {
-        const idx = codeBlocks.push({ lang: (lang || '').trim(), code }) - 1;
-        return `\u0000CODEBLOCK_${idx}\u0000`;
-    });
-
-    // preserve blockquotes BEFORE escapeHtml (because ">" becomes "&gt;")
-    const quoteBlocks = [];
-    md = md.replace(/(^|\n)([ \t]*>(?:[^\n]*)(?:\n[ \t]*>[^\n]*)*)/g, function (_, lead, quoteBlock) {
-        const idx = quoteBlocks.push(quoteBlock) - 1;
-        return `${lead}\u0000QUOTE_${idx}\u0000`;
-    });
-
-    // escape the rest
-    md = escapeHtml(md);
-
-    // restore blockquotes (escaped inside)
-    md = md.replace(/\u0000QUOTE_(\d+)\u0000/g, function (_, idx) {
-        const raw = quoteBlocks[Number(idx)] || '';
-        const lines = raw
-            .split('\n')
-            .map(l => l.replace(/^[ \t]*>\s?/, '')); // remove "> "
-
-        // escapa o conteúdo do quote (segurança), mas mantém <br>
-        const safe = lines.map(escapeHtml).join('<br>');
-        return `<blockquote>${safe}</blockquote>`;
-    });
-
-    // headings
-    md = md.replace(/^######\s*(.*)$/gm, '<h6>$1</h6>');
-    md = md.replace(/^#####\s*(.*)$/gm, '<h5>$1</h5>');
-    md = md.replace(/^####\s*(.*)$/gm, '<h4>$1</h4>');
-    md = md.replace(/^###\s*(.*)$/gm, '<h3>$1</h3>');
-    md = md.replace(/^##\s*(.*)$/gm, '<h2>$1</h2>');
-    md = md.replace(/^#\s*(.*)$/gm, '<h1>$1</h1>');
-
-    // horizontal rule
-    md = md.replace(/^---$/gm, '<hr>');
-
-    // 🔥 blockquotes
-    md = md.replace(/(^|\n)(>>(?:[^\n]*\n?)+)/g, function (_, lead, quoteBlock) {
-        const lines = quoteBlock
-            .trim()
-            .split('\n')
-            .map(l => l.replace(/^>\s?/, '').trim());
-
-        return '\n<blockquote>' + lines.join('<br>') + '</blockquote>\n';
-    });
-
-    // ✅ lists (nested: ul/ol based on indentation)
-    function indentWidth(ws) {
-        // tab conta como 4 espaços (ajuste se quiser)
-        let n = 0;
-        for (const ch of ws) n += (ch === '\t') ? 4 : 1;
-        return n;
-    }
-
-    function closeAllLists(stack, out) {
-        while (stack.length) {
-            const top = stack[stack.length - 1];
-            if (top.liOpen) out.push('</li>');
-            out.push(`</${top.type}>`);
-            stack.pop();
-        }
-    }
-
-    function parseNestedLists(text) {
-        const lines = text.replace(/\r\n/g, '\n').split('\n');
-        const out = [];
-        const stack = []; // { indent, type: 'ul'|'ol', liOpen: boolean }
-
-        function closeToIndent(targetIndent) {
-            while (stack.length && stack[stack.length - 1].indent > targetIndent) {
-                const top = stack[stack.length - 1];
-                if (top.liOpen) out.push('</li>');
-                out.push(`</${top.type}>`);
-                stack.pop();
-            }
-        }
-
-        function ensureList(indent, type) {
-            // se no mesmo nível mas tipo mudou, fecha e abre do novo tipo
-            if (stack.length && stack[stack.length - 1].indent === indent && stack[stack.length - 1].type !== type) {
-                const top = stack[stack.length - 1];
-                if (top.liOpen) out.push('</li>');
-                out.push(`</${top.type}>`);
-                stack.pop();
-            }
-            if (!stack.length || indent > stack[stack.length - 1].indent) {
-                out.push(`<${type}>`);
-                stack.push({ indent, type, liOpen: false });
-            } else if (indent < stack[stack.length - 1].indent) {
-                closeToIndent(indent);
-                if (!stack.length || stack[stack.length - 1].indent !== indent) {
-                    out.push(`<${type}>`);
-                    stack.push({ indent, type, liOpen: false });
-                }
-            }
-        }
-
-        function openLi(text) {
-            const top = stack[stack.length - 1];
-            if (top.liOpen) out.push('</li>');
-            out.push(`<li>${text}`);
-            top.liOpen = true;
-        }
-
-        for (let i = 0; i < lines.length; i++) {
-            const line = lines[i];
-
-            // ignora linhas vazias dentro do parsing (deixa pro parser de parágrafos depois)
-            if (!line.trim()) {
-                // fecha listas antes de uma linha realmente “em branco” (mantém comportamento previsível)
-                closeAllLists(stack, out);
-                out.push('');
-                continue;
-            }
-
-            // Detecta item de lista:
-            // - unordered: -, *, +
-            // - ordered: 1. 2. 10.
-            const m = line.match(/^([ \t]*)([-*+])\s+(.*)$/) || line.match(/^([ \t]*)(\d+\.)\s+(.*)$/);
-            if (m) {
-                const indent = indentWidth(m[1] || '');
-                const marker = m[2];
-                const content = (m[3] || '').trim();
-
-                const type = marker.endsWith('.') ? 'ol' : 'ul';
-                ensureList(indent, type);
-                openLi(content);
-                continue;
-            }
-
-            // Linha comum: fecha qualquer lista aberta antes de sair
-            closeAllLists(stack, out);
-            out.push(line);
-        }
-
-        closeAllLists(stack, out);
-        return out.join('\n');
-    }
-
-    md = parseNestedLists(md);
-
-    // paragraphs: split by blank lines, but avoid wrapping existing block tags
-    const blocks = md.split(/\n\s*\n/);
-    md = blocks.map(b => {
-        b = b.trim();
-        if (!b) return '';
-        if (/^<h\d|^<ul|^<ol|^<pre|^<blockquote|^<hr/.test(b)) return b;
-        return '<p>' + b.replace(/\n/g, '<br>') + '</p>';
-    }).join('\n');
-
-    // inline: images, links, bold, italic, inline code
-    md = md.replace(/!\[([^\]]*)\]\(([^)]+)\)/g, '<img src="$2" alt="$1" class="post-image">');
-    md = md.replace(/\[([^\]]+)\]\((\S+?)\)/g, '<a href="$2">$1</a>');
-    md = md.replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>');
-    md = md.replace(/\*([^*]+)\*/g, '<em>$1</em>');
-    md = md.replace(/`([^`]+)`/g, '<code>$1</code>');
-
-    // restore code blocks
-    md = md.replace(/\u0000CODEBLOCK_(\d+)\u0000/g, function (_, idx) {
-        const cb = codeBlocks[Number(idx)];
-        const langClass = cb.lang ? ' class="language-' + cb.lang + '"' : '';
-        return `<pre><code${langClass}>${escapeHtml(cb.code)}</code></pre>`;
-    });
-
-    return md;
-}
-
 async function main() {
     document.getElementById('year').textContent = new Date().getFullYear();
 
@@ -237,9 +59,11 @@ async function main() {
 
     document.title = post.title;
     document.getElementById('title').textContent = post.title;
-    document.getElementById('meta').innerHTML = `\n    Escrito por ${escapeHtml(post.author || 'Autor desconhecido')} em ${formatDatePt(post.date)}\n    <span class="badge">${post.category}</span>\n  `;
+    document.getElementById('meta').innerHTML = `
+    Escrito por ${escapeHtml(post.author || 'Autor desconhecido')} em ${formatDatePt(post.date)}
+    <span class="badge">${post.category}</span>
+  `;
 
-    // determine markdown source: explicit `md` in posts.json -> derived /posts/<id>.md -> fallback replace .html
     let mdPath = post.md || `/posts/${id}.md`;
     if (!mdPath.startsWith('/')) mdPath = '/' + mdPath.replace(/^\/+/, '');
 
@@ -247,7 +71,7 @@ async function main() {
     const contentEl = document.getElementById('content');
     contentEl.innerHTML = mdToHtml(md);
 
-    // trigger Prism highlighting if available (scoped to the post content)
+    // Prism
     if (window.Prism) {
         if (typeof window.Prism.highlightAllUnder === 'function') {
             window.Prism.highlightAllUnder(contentEl);
@@ -255,7 +79,6 @@ async function main() {
             window.Prism.highlightAll();
         }
     }
-    if (window.Prism) Prism.highlightAll();
 }
 
 main().catch(err => {
