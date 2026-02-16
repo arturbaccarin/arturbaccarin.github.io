@@ -68,5 +68,15 @@
         "author": "Artur Baccarin",
         "file": "posts/ordenando-com-elegancia-no-go-com-o-sort.html",
         "md": "posts/ordenando-com-elegancia-no-go-com-o-sort.md"
+    },
+    {
+        "id": "descomplicando-o-cubo-da-escalabilidade-afk",
+        "title": "Descomplicando o cubo da escalabilidade AFK",
+        "date": "14-07-2025",
+        "category": "Arquitetura de software",
+        "excerpt": "Entenda como o conceito de cubo da escalabilidade pode ajudar a pensar em soluções escaláveis.",
+        "author": "Artur Baccarin",
+        "file": "posts/descomplicando-o-cubo-da-escalabilidade-afk.html",
+        "md": "posts/descomplicando-o-cubo-da-escalabilidade-afk.md"
     }
 ]
