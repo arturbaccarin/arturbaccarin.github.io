@@ -28,25 +28,5 @@
         "author": "Artur Baccarin",
         "file": "posts/monolito-um-comeco-inteligente-nao-um-erro.html",
         "md": "posts/monolito-um-comeco-inteligente-nao-um-erro.md"
-    },
-    {
-        "id": "descomplicando-generics",
-        "title": "Descomplicando generics 123",
-        "date": "31-08-2025",
-        "category": "Go",
-        "excerpt": "Uma introdução prática aos generics em Go, com exemplos e armadilhas comuns.",
-        "author": "Artur Baccarin",
-        "file": "posts/descomplicando-generics.html",
-        "md": "posts/descomplicando-generics.md"
-    },
-    {
-        "id": "parametros-opcionais",
-        "title": "Lidando com parâmetros opcionais em Go",
-        "date": "12-05-2025",
-        "category": "Go",
-        "excerpt": "Padrões e alternativas para simular parâmetros opcionais em funções Go.",
-        "author": "Artur Baccarin",
-        "file": "posts/parametros-opcionais.html",
-        "md": "posts/parametros-opcionais.md"
     }
 ]
