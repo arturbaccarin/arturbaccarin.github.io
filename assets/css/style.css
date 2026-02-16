@@ -176,3 +176,14 @@ code {
     font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
     font-size: 0.95rem;
 }
+
+.about-image {
+    text-align: center;
+    margin: 18px 0;
+}
+
+.about-image img {
+    width: 30%;
+    max-width: 520px;
+    border-radius: 16px;
+}

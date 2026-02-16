@@ -4,8 +4,9 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Sobre — Foi o Go que me deu</title>
+    <title>Sobre • Foi o Go que me deu</title>
     <link rel="icon" href="/assets/img/icone.png" type="image/svg+xml" />
+    <!-- replace with PNG: <link rel="icon" type="image/png" href="/assets/img/favicon.png"> -->
     <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 
@@ -13,10 +14,13 @@
     <div class="container">
         <header>
             <div>
-                <a class="brand" href="./"><img class="brand-logo" src="/assets/img/icone.png" alt="Logo">Foi o Go que
-                    me
-                    deu</a>
+                <a class="brand" href="./">
+                    <img class="brand-logo" src="/assets/img/icone.png" alt="Logo">
+                    Foi o Go que me deu
+                </a>
+                <div class="subtitle">Um cantinho digital sobre Go, backend e surtos técnicos organizados</div>
             </div>
+
             <nav>
                 <a href="./categorias.html">Categorias</a>
                 <a href="./sobre.html">Sobre</a>
@@ -24,21 +28,55 @@
         </header>
 
         <main>
-            <article>
-                <h1>Sobre</h1>
-                <p>Este é o blog "Foi o Go que me deu" — textos e tutoriais práticos sobre a linguagem Go, padrões e
-                    boas práticas. Os posts são mantidos em HTML estático dentro da pasta <code>/posts</code>.</p>
-                <h2>Sobre o autor</h2>
-                <p>Artur Benzi Baccarin — escrevendo sobre desenvolvimento, Go e engenharia de software.</p>
-                <h2>Contato</h2>
-                <p>Coloque aqui seu e‑mail, links para redes sociais ou instruções de contato.</p>
+            <article class="card">
+                <h1>Sobre mim</h1>
+
+                <h2>Olá,</h2>
+                <p>
+                    Eu sou o Artur Baccarin — desenvolvedor Go por paixão (e 100% focado em backend, porque frontend
+                    ainda não
+                    entra na minha cabeça). Estudo tecnologia todos os dias e adoro transformar o que aprendo em
+                    conteúdo simples,
+                    direto e útil. Gosto de compartilhar conhecimento, trocar ideias e contribuir com a comunidade
+                    sempre que posso
+                    — seja escrevendo, explicando ou apenas organizando meus próprios surtos técnicos em texto.
+                </p>
+                <p>
+                    Além do código, também curto música, arte e videogames — tudo que mistura criatividade com um toque
+                    de caos.
+                </p>
+                <p>
+                    Seja bem-vindo ao meu cantinho digital! Espero que você curta o conteúdo, aprenda algo novo, ou pelo
+                    menos saia
+                    daqui com uma dúvida interessante na cabeça.
+                </p>
+
+                <blockquote>
+                    PS.: Agradecimentos especiais a todos os membros do DJA, que, se não fosse pelo incentivo deles,
+                    este site não existiria.
+                </blockquote>
+
+                <div class="meta" style="margin-top: 14px;">
+                    <span class="badge"><a href="https://br.linkedin.com/in/arturbaccarin" target="_blank"
+                            rel="noopener">LinkedIn</a></span>
+                    <span class="badge"><a href="https://github.com/arturbaccarin" target="_blank"
+                            rel="noopener">GitHub</a></span>
+                </div>
+
+                <div class="about-image">
+                    <img src="/assets/img/sobre-mim.jpg" alt="Foto do Artur Baccarin" />
+                </div>
+
+
             </article>
         </main>
 
         <footer>© <span id="year"></span> Foi o Go que me deu</footer>
     </div>
 
-    <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+    <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
 </body>
 
 </html>
