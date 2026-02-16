@@ -202,3 +202,10 @@ ol ol li {
     margin: 8px 0;
     /* ajuste se quiser mais ou menos */
 }
+
+.post-image {
+    width: 85%;
+    max-width: 750px;
+    display: block;
+    margin: 32px auto;
+}

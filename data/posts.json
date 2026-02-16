@@ -28,5 +28,15 @@
         "author": "Artur Baccarin",
         "file": "posts/monolito-um-comeco-inteligente-nao-um-erro.html",
         "md": "posts/monolito-um-comeco-inteligente-nao-um-erro.md"
+    },
+    {
+        "id": "a-linha-invisivel-que-guia-seu-codigo",
+        "title": "A linha invisível que guia seu código",
+        "date": "05-07-2025",
+        "category": "Arquitetura de software",
+        "excerpt": "Entenda o conceito de linha invisível e como ela pode ajudar a guiar a estrutura do seu código.",
+        "author": "Artur Baccarin",
+        "file": "posts/a-linha-invisivel-que-guia-seu-codigo.html",
+        "md": "posts/a-linha-invisivel-que-guia-seu-codigo.md"
     }
 ]

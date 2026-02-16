@@ -180,7 +180,7 @@ function mdToHtml(md) {
     }).join('\n');
 
     // inline: images, links, bold, italic, inline code
-    md = md.replace(/!\[([^\]]*)\]\(([^)]+)\)/g, '<img src="$2" alt="$1">');
+    md = md.replace(/!\[([^\]]*)\]\(([^)]+)\)/g, '<img src="$2" alt="$1" class="post-image">');
     md = md.replace(/\[([^\]]+)\]\((\S+?)\)/g, '<a href="$2">$1</a>');
     md = md.replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>');
     md = md.replace(/\*([^*]+)\*/g, '<em>$1</em>');
