@@ -10,6 +10,16 @@
         "md": "posts/o-que-sao-padroes-de-projeto-e-para-que-servem.md"
     },
     {
+        "id": "voce-conhece-o-sombreamento-em-go",
+        "title": "Você conhece o sombreamento em Go?",
+        "date": "03-06-2025",
+        "category": "Go",
+        "excerpt": "Entenda o que é sombreamento (shadowing) em Go e como ele pode afetar seu código.",
+        "author": "Artur Baccarin",
+        "file": "posts/voce-conhece-o-sombreamento-em-go.html",
+        "md": "posts/voce-conhece-o-sombreamento-em-go.md"
+    },
+    {
         "id": "descomplicando-generics",
         "title": "Descomplicando generics 123",
         "date": "31-08-2025",
