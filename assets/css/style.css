@@ -187,3 +187,18 @@ code {
     max-width: 520px;
     border-radius: 16px;
 }
+
+/* Espaçamento padrão entre itens */
+ul li,
+ol li {
+    margin: 4px 0;
+}
+
+/* 🔥 Espaço extra para listas internas */
+ul ul li,
+ul ol li,
+ol ul li,
+ol ol li {
+    margin: 8px 0;
+    /* ajuste se quiser mais ou menos */
+}

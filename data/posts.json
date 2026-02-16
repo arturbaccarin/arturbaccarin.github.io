@@ -1,5 +1,15 @@
 [
     {
+        "id": "o-que-sao-padroes-de-projeto-e-para-que-servem",
+        "title": "O que são padrões de projeto e para que servem?",
+        "date": "03-06-2025",
+        "category": "Arquitetura de software",
+        "excerpt": "Entenda o que são padrões de projeto, suas características fundamentais, relações e como eles ajudam na tomada de decisões arquiteturais.",
+        "author": "Artur Baccarin",
+        "file": "posts/o-que-sao-padroes-de-projeto-e-para-que-servem.html",
+        "md": "posts/o-que-sao-padroes-de-projeto-e-para-que-servem.md"
+    },
+    {
         "id": "descomplicando-generics",
         "title": "Descomplicando generics 123",
         "date": "31-08-2025",
