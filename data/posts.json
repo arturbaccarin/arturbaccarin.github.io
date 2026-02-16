@@ -20,6 +20,16 @@
         "md": "posts/voce-conhece-o-sombreamento-em-go.md"
     },
     {
+        "id": "monolito-um-comeco-inteligente-nao-um-erro",
+        "title": "Monolito: um começo inteligente, não um erro",
+        "date": "05-07-2025",
+        "category": "Arquitetura de software",
+        "excerpt": "Entenda por que monolitos podem ser uma escolha inteligente em certos contextos.",
+        "author": "Artur Baccarin",
+        "file": "posts/monolito-um-comeco-inteligente-nao-um-erro.html",
+        "md": "posts/monolito-um-comeco-inteligente-nao-um-erro.md"
+    },
+    {
         "id": "descomplicando-generics",
         "title": "Descomplicando generics 123",
         "date": "31-08-2025",
