@@ -30,6 +30,8 @@ export function mdToHtml(md) {
     md = applyHeadings(md);
     md = applyHorizontalRules(md);
 
+    md = parseTables(md);
+
     md = parseNestedLists(md);
 
     md = wrapParagraphs(md);
@@ -102,6 +104,98 @@ function applyHeadings(md) {
 function applyHorizontalRules(md) {
     return md.replace(/^---$/gm, '<hr>');
 }
+
+/* -------------------------- Tables -------------------------- */
+
+function parseTables(md) {
+    const lines = md.split('\n');
+    const out = [];
+
+    let i = 0;
+
+    while (i < lines.length) {
+        const line = lines[i];
+
+        // Detecta possível header de tabela
+        if (
+            line.includes('|') &&
+            i + 1 < lines.length &&
+            isSeparatorLine(lines[i + 1])
+        ) {
+            const headerCells = splitTableRow(line);
+            i += 2; // pula header + separator
+
+            const bodyRows = [];
+
+            while (i < lines.length && lines[i].includes('|')) {
+                bodyRows.push(splitTableRow(lines[i]));
+                i++;
+            }
+
+            out.push(buildTableHtml(headerCells, bodyRows));
+            continue;
+        }
+
+        out.push(line);
+        i++;
+    }
+
+    return out.join('\n');
+}
+
+function isSeparatorLine(line) {
+    // linha tipo: |-----|------|----|
+    return /^\s*\|?[\s:-]+(\|[\s:-]+)+\|?\s*$/.test(line);
+}
+
+function splitTableRow(line) {
+    return line
+        .trim()
+        .replace(/^\|/, '')
+        .replace(/\|$/, '')
+        .split('|')
+        .map(cell => cell.trim());
+}
+
+function buildTableHtml(headers, rows) {
+    // Aqui o conteúdo já está escapado (porque md foi escapeHtml() antes).
+    // Então só reativamos <br> (e a variação dupla-escapada, por garantia).
+    function allowBrOnlyFromEscaped(escapedText) {
+        let s = (escapedText ?? '');
+
+        // caso normal: &lt;br&gt;
+        s = s.replace(/&lt;br\s*\/?&gt;/gi, '<br>');
+
+        // caso raro (se algo tiver sido escapado 2x em algum lugar): &amp;lt;br&amp;gt;
+        s = s.replace(/&amp;lt;br\s*\/?&amp;gt;/gi, '<br>');
+
+        return s;
+    }
+
+    let html = '<table>';
+
+    html += '<thead><tr>';
+    headers.forEach(h => {
+        html += `<th>${allowBrOnlyFromEscaped(h)}</th>`;
+    });
+    html += '</tr></thead>';
+
+    if (rows.length) {
+        html += '<tbody>';
+        rows.forEach(row => {
+            html += '<tr>';
+            row.forEach(cell => {
+                html += `<td>${allowBrOnlyFromEscaped(cell)}</td>`;
+            });
+            html += '</tr>';
+        });
+        html += '</tbody>';
+    }
+
+    html += '</table>';
+    return html;
+}
+
 
 /* -------------------------- Lists (nested) -------------------------- */
 

@@ -217,3 +217,63 @@ blockquote {
     margin: 24px 0;
     border-radius: 8px;
 }
+
+/* ============================= */
+/*           TABLES              */
+/* ============================= */
+
+table {
+    width: auto;
+    /* NÃO força 100% */
+    min-width: 100%;
+    /* ocupa tudo só se precisar */
+    border-collapse: separate;
+    border-spacing: 0;
+    margin: 32px 0;
+    font-size: 0.95rem;
+    background: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.05);
+}
+
+/* Cabeçalho */
+table thead {
+    background: linear-gradient(90deg, #00ADD8 0%, #009ac2 100%);
+    color: white;
+}
+
+table th {
+    padding: 14px 16px;
+    text-align: left;
+    font-weight: 600;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+}
+
+/* Corpo */
+table td {
+    padding: 14px 16px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+/* Alternância */
+table tbody tr:nth-child(even) {
+    background: #f9fbfc;
+}
+
+/* Hover */
+table tbody tr:hover {
+    background: rgba(0, 173, 216, 0.06);
+    transition: background 0.2s ease;
+}
+
+/* Remove última borda */
+table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* Scroll horizontal apenas se precisar */
+.post-content {
+    overflow-x: auto;
+}

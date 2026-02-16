@@ -78,5 +78,15 @@
         "author": "Artur Baccarin",
         "file": "posts/descomplicando-o-cubo-da-escalabilidade-afk.html",
         "md": "posts/descomplicando-o-cubo-da-escalabilidade-afk.md"
+    },
+    {
+        "id": "go-com-clareza-e-estilo-google",
+        "title": "Go com clareza e estilo Google",
+        "date": "24-07-2025",
+        "category": "Go",
+        "excerpt": "Entenda como o estilo Google pode ajudar a escrever Go mais claro e legível.",
+        "author": "Artur Baccarin",
+        "file": "posts/go-com-clareza-e-estilo-google.html",
+        "md": "posts/go-com-clareza-e-estilo-google.md"
     }
 ]
