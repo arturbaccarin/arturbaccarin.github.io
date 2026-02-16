@@ -58,5 +58,15 @@
         "author": "Artur Baccarin",
         "file": "posts/microsservicos-dividir-para-conquistar-ou-complicar.html",
         "md": "posts/microsservicos-dividir-para-conquistar-ou-complicar.md"
+    },
+    {
+        "id": "ordenando-com-elegancia-no-go-com-o-sort",
+        "title": "Ordenando com elegância no Go com o sort",
+        "date": "11-07-2025",
+        "category": "Go",
+        "excerpt": "Entenda como ordenar dados de forma elegante em Go usando o pacote sort.",
+        "author": "Artur Baccarin",
+        "file": "posts/ordenando-com-elegancia-no-go-com-o-sort.html",
+        "md": "posts/ordenando-com-elegancia-no-go-com-o-sort.md"
     }
 ]
