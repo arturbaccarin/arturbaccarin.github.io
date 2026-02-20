@@ -88,5 +88,15 @@
         "author": "Artur Baccarin",
         "file": "posts/go-com-clareza-e-estilo-google.html",
         "md": "posts/go-com-clareza-e-estilo-google.md"
+    },
+    {
+        "id": "interface-e-coisa-de-consumidor",
+        "title": "Interface é coisa de consumidor",
+        "date": "03-08-2025",
+        "category": "Go",
+        "excerpt": "Entenda por que as interfaces em Go são mais adequadas para consumidores do que para fornecedores de código.",
+        "author": "Artur Baccarin",
+        "file": "posts/interface-e-coisa-de-consumidor.html",
+        "md": "posts/interface-e-coisa-de-consumidor.md"
     }
 ]
