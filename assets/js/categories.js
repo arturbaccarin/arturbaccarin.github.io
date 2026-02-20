@@ -9,7 +9,7 @@ function postItem(post) {
   return `
     <li>
       <a href="${href}">${post.title}</a>
-      <div class="meta">${post.date}</div>
+      <div class="meta">${formatDateDMY(post.date)}</div>
     </li>
   `;
 }
@@ -44,3 +44,11 @@ main().catch(err => {
   const listEl = document.getElementById('categoriesList');
   if (listEl) listEl.innerHTML = `<div class="card">Erro: ${err.message}</div>`;
 });
+
+function formatDateDMY(iso) {
+  // espera "YYYY-MM-DD"
+  if (!iso) return '';
+  const m = iso.match(/^(\d{4})-(\d{2})-(\d{2})$/);
+  if (!m) return iso; // fallback, caso venha diferente
+  return `${m[3]}-${m[2]}-${m[1]}`; // DD-MM-YYYY
+}

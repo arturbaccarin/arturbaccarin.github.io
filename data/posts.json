@@ -2,7 +2,7 @@
     {
         "id": "o-que-sao-padroes-de-projeto-e-para-que-servem",
         "title": "O que são padrões de projeto e para que servem?",
-        "date": "03-07-2025",
+        "date": "2025-07-03",
         "category": "Arquitetura de software",
         "excerpt": "Entenda o que são padrões de projeto, suas características fundamentais, relações e como eles ajudam na tomada de decisões arquiteturais.",
         "author": "Artur Baccarin",
@@ -12,7 +12,7 @@
     {
         "id": "voce-conhece-o-sombreamento-em-go",
         "title": "Você conhece o sombreamento em Go?",
-        "date": "04-07-2025",
+        "date": "2025-07-04",
         "category": "Go",
         "excerpt": "Entenda o que é sombreamento (shadowing) em Go e como ele pode afetar seu código.",
         "author": "Artur Baccarin",
@@ -22,7 +22,7 @@
     {
         "id": "monolito-um-comeco-inteligente-nao-um-erro",
         "title": "Monolito: um começo inteligente, não um erro",
-        "date": "05-07-2025",
+        "date": "2025-07-05",
         "category": "Arquitetura de software",
         "excerpt": "Entenda por que monolitos podem ser uma escolha inteligente em certos contextos.",
         "author": "Artur Baccarin",
@@ -32,7 +32,7 @@
     {
         "id": "a-linha-invisivel-que-guia-seu-codigo",
         "title": "A linha invisível que guia seu código",
-        "date": "05-07-2025",
+        "date": "2025-07-05",
         "category": "Arquitetura de software",
         "excerpt": "Entenda o conceito de linha invisível e como ela pode ajudar a guiar a estrutura do seu código.",
         "author": "Artur Baccarin",
@@ -42,7 +42,7 @@
     {
         "id": "antes-do-main-existe-o-init",
         "title": "Antes do main existe o init",
-        "date": "06-07-2025",
+        "date": "2025-07-06",
         "category": "Go",
         "excerpt": "Entenda o conceito de init em Go e como ele pode afetar o comportamento do seu programa.",
         "author": "Artur Baccarin",
@@ -52,7 +52,7 @@
     {
         "id": "microsservicos-dividir-para-conquistar-ou-complicar",
         "title": "Microsserviços: dividir para conquistar ou complicar?",
-        "date": "09-07-2025",
+        "date": "2025-07-09",
         "category": "Arquitetura de software",
         "excerpt": "Entenda os benefícios e desafios do uso de microsserviços.",
         "author": "Artur Baccarin",
@@ -62,7 +62,7 @@
     {
         "id": "ordenando-com-elegancia-no-go-com-o-sort",
         "title": "Ordenando com elegância no Go com o sort",
-        "date": "11-07-2025",
+        "date": "2025-07-11",
         "category": "Go",
         "excerpt": "Entenda como ordenar dados de forma elegante em Go usando o pacote sort.",
         "author": "Artur Baccarin",
@@ -72,7 +72,7 @@
     {
         "id": "descomplicando-o-cubo-da-escalabilidade-afk",
         "title": "Descomplicando o cubo da escalabilidade AFK",
-        "date": "14-07-2025",
+        "date": "2025-07-14",
         "category": "Arquitetura de software",
         "excerpt": "Entenda como o conceito de cubo da escalabilidade pode ajudar a pensar em soluções escaláveis.",
         "author": "Artur Baccarin",
@@ -82,7 +82,7 @@
     {
         "id": "go-com-clareza-e-estilo-google",
         "title": "Go com clareza e estilo Google",
-        "date": "24-07-2025",
+        "date": "2025-07-24",
         "category": "Go",
         "excerpt": "Entenda como o estilo Google pode ajudar a escrever Go mais claro e legível.",
         "author": "Artur Baccarin",
@@ -92,7 +92,7 @@
     {
         "id": "interface-e-coisa-de-consumidor",
         "title": "Interface é coisa de consumidor",
-        "date": "03-08-2025",
+        "date": "2025-08-03",
         "category": "Go",
         "excerpt": "Entenda por que as interfaces em Go são mais adequadas para consumidores do que para fornecedores de código.",
         "author": "Artur Baccarin",
