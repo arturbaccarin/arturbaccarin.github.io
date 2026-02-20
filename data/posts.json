@@ -98,5 +98,15 @@
         "author": "Artur Baccarin",
         "file": "posts/interface-e-coisa-de-consumidor.html",
         "md": "posts/interface-e-coisa-de-consumidor.md"
+    },
+    {
+        "id": "o-modelo-41-de-visoes-na-arquitetura-de-software",
+        "title": "O modelo 4+1 de visões na arquitetura de software",
+        "date": "2025-08-03",
+        "category": "Arquitetura de software",
+        "excerpt": "Entenda o modelo 4+1 de visões na arquitetura de software.",
+        "author": "Artur Baccarin",
+        "file": "posts/o-modelo-41-de-visoes-na-arquitetura-de-software.html",
+        "md": "posts/o-modelo-41-de-visoes-na-arquitetura-de-software.md"
     }
 ]
