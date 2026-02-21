@@ -124,7 +124,7 @@
         "title": "Definindo serviço em microsserviços",
         "date": "2025-08-28",
         "category": "Arquitetura de software",
-        "excerpt": "Entenda como definir serviços em microsserviços de forma clara e eficiente.",
+        "excerpt": "Entenda o que é um serviço em microsserviços, como funciona sua API e por que o baixo acoplamento é essencial nessa arquitetura.",
         "author": "Artur Baccarin",
         "file": "posts/definindo-servico-em-microsservicos.html",
         "md": "posts/definindo-servico-em-microsservicos.md"
@@ -134,7 +134,7 @@
         "title": "Descomplicando generics",
         "date": "2025-08-31",
         "category": "Go",
-        "excerpt": "Entenda como funcionam os generics em Go e como usá-los de forma eficiente.",
+        "excerpt": "Aprenda o que são generics em Go, quando utilizá-los e como evitar armadilhas comuns ao trabalhar com tipos genéricos.",
         "author": "Artur Baccarin",
         "file": "posts/descomplicando-generics.html",
         "md": "posts/descomplicando-generics.md"
@@ -144,7 +144,7 @@
         "title": "Atenção ao usar embedded types",
         "date": "2025-10-11",
         "category": "Go",
-        "excerpt": "Entenda como funcionam os embedded types em Go e como usá-los de forma eficiente.",
+        "excerpt": "Descubra como embedded types funcionam em Go e quais cuidados tomar para evitar problemas de encapsulamento e design.",
         "author": "Artur Baccarin",
         "file": "posts/atencao-ao-usar-embedded-types.html",
         "md": "posts/atencao-ao-usar-embedded-types.md"
@@ -154,9 +154,19 @@
         "title": "Lidando com parâmetros opcionais",
         "date": "2025-10-17",
         "category": "Go",
-        "excerpt": "Entenda como lidar com parâmetros opcionais em Go de forma eficiente.",
+        "excerpt": "Veja como simular parâmetros opcionais em Go usando structs, builder e function options de forma idiomática.",
         "author": "Artur Baccarin",
         "file": "posts/lidando-com-parametros-opcionais.html",
         "md": "posts/lidando-com-parametros-opcionais.md"
+    },
+    {
+        "id": "dicas-para-organizacao-de-projetos",
+        "title": "Dicas para organização de projetos",
+        "date": "2025-10-28",
+        "category": "Go",
+        "excerpt": "Dicas práticas para organizar projetos em Go de forma eficiente e escalável.",
+        "author": "Artur Baccarin",
+        "file": "posts/dicas-para-organizacao-de-projetos.html",
+        "md": "posts/dicas-para-organizacao-de-projetos.md"
     }
 ]
