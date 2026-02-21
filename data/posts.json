@@ -258,5 +258,15 @@
         "author": "Artur Baccarin",
         "file": "posts/da-aplicacao-monolitica-a-escala-de-milhoes-de-usuarios.html",
         "md": "posts/da-aplicacao-monolitica-a-escala-de-milhoes-de-usuarios.md"
+    },
+    {
+        "id": "vazamento-de-memoria-em-slices",
+        "title": "Vazamento de memória em slices",
+        "date": "2026-02-16",
+        "category": "Go",
+        "excerpt": "Entenda como vazamentos de memória podem ocorrer em Go ao reutilizar slices e manter referências desnecessárias, e veja como evitá-los com cópia de dados e boas práticas.",
+        "author": "Artur Baccarin",
+        "file": "posts/vazamento-de-memoria-em-slices.html",
+        "md": "posts/vazamento-de-memoria-em-slices.md"
     }
 ]
