@@ -198,5 +198,15 @@
         "author": "Artur Baccarin",
         "file": "posts/os-desafios-dos-pontos-flutuantes.html",
         "md": "posts/os-desafios-dos-pontos-flutuantes.md"
+    },
+    {
+        "id": "capacidade-dos-slices-explicada",
+        "title": "Capacidade dos slices explicada",
+        "date": "2025-12-09",
+        "category": "Go",
+        "excerpt": "Diferenças entre arrays e slices em Go, abordando estrutura, comportamento em memória, crescimento dinâmico e impactos em performance.",
+        "author": "Artur Baccarin",
+        "file": "posts/capacidade-dos-slices-explicada.html",
+        "md": "posts/capacidade-dos-slices-explicada.md"
     }
 ]
