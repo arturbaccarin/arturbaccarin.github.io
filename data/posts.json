@@ -175,7 +175,18 @@
         "date": "2025-11-07",
         "category": "Go",
         "excerpt": "Evite pacotes genéricos como utils e aprenda a organizar seu código Go com pacotes coesos, claros e bem nomeados.",
+        "author": "Artur Baccarin",
         "file": "posts/nomeando-pacotes-utilitarios.html",
         "md": "posts/nomeando-pacotes-utilitarios.md"
+    },
+    {
+        "id": "lidando-com-overflow-em-inteiros",
+        "title": "Lidando com overflow em inteiros",
+        "date": "2025-11-18",
+        "category": "Go",
+        "excerpt": "Entenda os tipos inteiros em Go, como ocorre overflow e como prevenir erros com operações seguras e uso correto dos tipos.",
+        "author": "Artur Baccarin",
+        "file": "posts/lidando-com-overflow-em-inteiros.html",
+        "md": "posts/lidando-com-overflow-em-inteiros.md"
     }
 ]
