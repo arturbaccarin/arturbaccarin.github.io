@@ -148,5 +148,15 @@
         "author": "Artur Baccarin",
         "file": "posts/atencao-ao-usar-embedded-types.html",
         "md": "posts/atencao-ao-usar-embedded-types.md"
+    },
+    {
+        "id": "lidando-com-parametros-opcionais",
+        "title": "Lidando com parâmetros opcionais",
+        "date": "2025-10-17",
+        "category": "Go",
+        "excerpt": "Entenda como lidar com parâmetros opcionais em Go de forma eficiente.",
+        "author": "Artur Baccarin",
+        "file": "posts/lidando-com-parametros-opcionais.html",
+        "md": "posts/lidando-com-parametros-opcionais.md"
     }
 ]
