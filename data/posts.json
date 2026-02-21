@@ -248,5 +248,15 @@
         "author": "Artur Baccarin",
         "file": "posts/armadilhas-comuns-ao-copiar-slices.html",
         "md": "posts/armadilhas-comuns-ao-copiar-slices.md"
+    },
+    {
+        "id": "da-aplicacao-monolitica-a-escala-de-milhoes-de-usuarios",
+        "title": "Da aplicação monolítica à escala de milhões de usuários",
+        "date": "2026-02-16",
+        "category": "System design",
+        "excerpt": "Evolução arquitetural de sistemas: do monólito a uma arquitetura distribuída com load balancer, cache, filas, sharding e observabilidade para escalar aplicações.",
+        "author": "Artur Baccarin",
+        "file": "posts/da-aplicacao-monolitica-a-escala-de-milhoes-de-usuarios.html",
+        "md": "posts/da-aplicacao-monolitica-a-escala-de-milhoes-de-usuarios.md"
     }
 ]
