@@ -208,5 +208,15 @@
         "author": "Artur Baccarin",
         "file": "posts/capacidade-dos-slices-explicada.html",
         "md": "posts/capacidade-dos-slices-explicada.md"
+    },
+    {
+        "id": "segredos-do-slicing-de-slices",
+        "title": "Segredos do slicing de slices",
+        "date": "2025-12-20",
+        "category": "Go",
+        "excerpt": "Entenda como funciona o slicing em Go, os riscos do compartilhamento de arrays subjacentes e como o append pode impactar o comportamento e a performance.",
+        "author": "Artur Baccarin",
+        "file": "posts/segredos-do-slicing-de-slices.html",
+        "md": "posts/segredos-do-slicing-de-slices.md"
     }
 ]
