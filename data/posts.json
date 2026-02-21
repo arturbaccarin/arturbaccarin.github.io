@@ -138,5 +138,15 @@
         "author": "Artur Baccarin",
         "file": "posts/descomplicando-generics.html",
         "md": "posts/descomplicando-generics.md"
+    },
+    {
+        "id": "atencao-ao-usar-embedded-types",
+        "title": "Atenção ao usar embedded types",
+        "date": "2025-10-11",
+        "category": "Go",
+        "excerpt": "Entenda como funcionam os embedded types em Go e como usá-los de forma eficiente.",
+        "author": "Artur Baccarin",
+        "file": "posts/atencao-ao-usar-embedded-types.html",
+        "md": "posts/atencao-ao-usar-embedded-types.md"
     }
 ]
