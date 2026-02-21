@@ -118,5 +118,15 @@
         "author": "Artur Baccarin",
         "file": "posts/any-interface-e-qualquer-coisa-e-esse-e-o-problema.html",
         "md": "posts/any-interface-e-qualquer-coisa-e-esse-e-o-problema.md"
+    },
+    {
+        "id": "definindo-servico-em-microsservicos",
+        "title": "Definindo serviço em microsserviços",
+        "date": "2025-08-16",
+        "category": "Arquitetura de software",
+        "excerpt": "Entenda como definir serviços em microsserviços de forma clara e eficiente.",
+        "author": "Artur Baccarin",
+        "file": "posts/definindo-servico-em-microsservicos.html",
+        "md": "posts/definindo-servico-em-microsservicos.md"
     }
 ]
