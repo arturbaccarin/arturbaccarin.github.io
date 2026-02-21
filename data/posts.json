@@ -108,5 +108,15 @@
         "author": "Artur Baccarin",
         "file": "posts/o-modelo-41-de-visoes-na-arquitetura-de-software.html",
         "md": "posts/o-modelo-41-de-visoes-na-arquitetura-de-software.md"
+    },
+    {
+        "id": "any-interface-e-qualquer-coisa-e-esse-e-o-problema",
+        "title": "Any/interface{} é qualquer coisa e esse é o problema",
+        "date": "2025-08-16",
+        "category": "Go",
+        "excerpt": "Entenda o problema de usar interface{} em Go e como isso pode afetar a clareza do seu código.",
+        "author": "Artur Baccarin",
+        "file": "posts/any-interface-e-qualquer-coisa-e-esse-e-o-problema.html",
+        "md": "posts/any-interface-e-qualquer-coisa-e-esse-e-o-problema.md"
     }
 ]
