@@ -168,5 +168,14 @@
         "author": "Artur Baccarin",
         "file": "posts/dicas-para-organizacao-de-projetos.html",
         "md": "posts/dicas-para-organizacao-de-projetos.md"
+    },
+    {
+        "id": "nomeando-pacotes-utilitarios",
+        "title": "Nomeando pacotes utilitários",
+        "date": "2025-11-07",
+        "category": "Go",
+        "excerpt": "Evite pacotes genéricos como utils e aprenda a organizar seu código Go com pacotes coesos, claros e bem nomeados.",
+        "file": "posts/nomeando-pacotes-utilitarios.html",
+        "md": "posts/nomeando-pacotes-utilitarios.md"
     }
 ]
