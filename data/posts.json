@@ -228,5 +228,15 @@
         "author": "Artur Baccarin",
         "file": "posts/como-nao-inicializar-slices.html",
         "md": "posts/como-nao-inicializar-slices.md"
+    },
+    {
+        "id": "slice-nulo-vs-slice-vazio",
+        "title": "Slice nulo vs slice vazio",
+        "date": "2026-01-19",
+        "category": "Go",
+        "excerpt": "Entenda a diferença entre slices nulos e vazios em Go, seus impactos em memória, performance e como lidar corretamente em diferentes cenários.",
+        "author": "Artur Baccarin",
+        "file": "posts/slice-nulo-vs-slice-vazio.html",
+        "md": "posts/slice-nulo-vs-slice-vazio.md"
     }
 ]
