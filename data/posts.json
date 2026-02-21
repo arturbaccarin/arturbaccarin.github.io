@@ -238,5 +238,15 @@
         "author": "Artur Baccarin",
         "file": "posts/slice-nulo-vs-slice-vazio.html",
         "md": "posts/slice-nulo-vs-slice-vazio.md"
+    },
+    {
+        "id": "armadilhas-comuns-ao-copiar-slices",
+        "title": "Armadilhas comuns ao copiar slices",
+        "date": "2026-01-31",
+        "category": "Go",
+        "excerpt": "Aprenda a usar corretamente a função copy em Go, evitando erros comuns com slices, compartilhamento de memória e efeitos colaterais com append.",
+        "author": "Artur Baccarin",
+        "file": "posts/armadilhas-comuns-ao-copiar-slices.html",
+        "md": "posts/armadilhas-comuns-ao-copiar-slices.md"
     }
 ]
