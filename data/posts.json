@@ -218,5 +218,15 @@
         "author": "Artur Baccarin",
         "file": "posts/segredos-do-slicing-de-slices.html",
         "md": "posts/segredos-do-slicing-de-slices.md"
+    },
+    {
+        "id": "como-nao-inicializar-slices",
+        "title": "Como não inicializar slices",
+        "date": "2026-01-09",
+        "category": "Go",
+        "excerpt": "Inicializar slices sem capacidade definida pode causar realocações desnecessárias e impactar a performance; entender quando definir capacidade ou comprimento ajuda a equilibrar eficiência e legibilidade.",
+        "author": "Artur Baccarin",
+        "file": "posts/como-nao-inicializar-slices.html",
+        "md": "posts/como-nao-inicializar-slices.md"
     }
 ]
