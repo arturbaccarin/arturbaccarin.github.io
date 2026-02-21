@@ -188,5 +188,15 @@
         "author": "Artur Baccarin",
         "file": "posts/lidando-com-overflow-em-inteiros.html",
         "md": "posts/lidando-com-overflow-em-inteiros.md"
+    },
+    {
+        "id": "os-desafios-dos-pontos-flutuantes",
+        "title": "Os desafios dos pontos flutuantes",
+        "date": "2025-12-01",
+        "category": "Go",
+        "excerpt": "Entenda como números de ponto flutuante funcionam em Go, suas limitações de precisão e como evitar erros em comparações e cálculos.",
+        "author": "Artur Baccarin",
+        "file": "posts/os-desafios-dos-pontos-flutuantes.html",
+        "md": "posts/os-desafios-dos-pontos-flutuantes.md"
     }
 ]
