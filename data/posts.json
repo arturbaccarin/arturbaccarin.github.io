@@ -102,7 +102,7 @@
     {
         "id": "o-modelo-41-de-visoes-na-arquitetura-de-software",
         "title": "O modelo 4+1 de visões na arquitetura de software",
-        "date": "2025-08-03",
+        "date": "2025-08-09",
         "category": "Arquitetura de software",
         "excerpt": "Entenda o modelo 4+1 de visões na arquitetura de software.",
         "author": "Artur Baccarin",
@@ -122,11 +122,21 @@
     {
         "id": "definindo-servico-em-microsservicos",
         "title": "Definindo serviço em microsserviços",
-        "date": "2025-08-16",
+        "date": "2025-08-28",
         "category": "Arquitetura de software",
         "excerpt": "Entenda como definir serviços em microsserviços de forma clara e eficiente.",
         "author": "Artur Baccarin",
         "file": "posts/definindo-servico-em-microsservicos.html",
         "md": "posts/definindo-servico-em-microsservicos.md"
+    },
+    {
+        "id": "descomplicando-generics",
+        "title": "Descomplicando generics",
+        "date": "2025-08-31",
+        "category": "Go",
+        "excerpt": "Entenda como funcionam os generics em Go e como usá-los de forma eficiente.",
+        "author": "Artur Baccarin",
+        "file": "posts/descomplicando-generics.html",
+        "md": "posts/descomplicando-generics.md"
     }
 ]
