@@ -59,6 +59,8 @@ nav {
     color: var(--accent);
     display: inline-flex;
     align-items: center;
+    white-space: nowrap;
+    min-width: 0;
 }
 
 .brand img.brand-logo {
@@ -175,6 +177,50 @@ pre {
 code {
     font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
     font-size: 0.95rem;
+}
+
+/* Responsividade para mobile */
+@media (max-width: 768px) {
+    .brand {
+        font-size: 28px;
+    }
+
+    .brand img.brand-logo {
+        width: 35px;
+        height: 35px;
+        margin-right: 6px;
+    }
+
+    header {
+        padding: 12px 0;
+        gap: 8px;
+    }
+
+    nav {
+        gap: 12px;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+    }
+}
+
+@media (max-width: 480px) {
+    .brand {
+        font-size: 24px;
+    }
+
+    .brand img.brand-logo {
+        width: 32px;
+        height: 32px;
+        margin-right: 4px;
+    }
+
+    nav {
+        gap: 8px;
+    }
+
+    nav a {
+        font-size: 14px;
+    }
 }
 
 .about-image {
