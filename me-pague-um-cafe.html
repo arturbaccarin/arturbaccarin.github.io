@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Me Pague um Café • Foi o Go que me deu</title>
+    <link rel="icon" href="/assets/img/icone.png" type="image/svg+xml" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <style>
+        .payment-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin: 30px 0;
+        }
+
+        .payment-method {
+            padding: 24px;
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            background: var(--card-bg);
+            text-align: center;
+        }
+
+        .payment-method h3 {
+            margin-top: 0;
+            color: var(--accent);
+            font-size: 20px;
+        }
+
+        .qr-code {
+            margin: 20px 0;
+            padding: 20px;
+            background: #f9fbfc;
+            border-radius: 12px;
+        }
+
+        .qr-code img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .wallet-address {
+            background: #f9fbfc;
+            padding: 16px;
+            border-radius: 8px;
+            word-break: break-all;
+            font-family: monospace;
+            font-size: 12px;
+            margin: 15px 0;
+            border: 1px solid var(--border);
+        }
+
+        .supporters {
+            margin: 40px 0;
+        }
+
+        .supporters h2 {
+            margin-top: 0;
+            margin-bottom: 24px;
+        }
+
+        .supporters-list {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+        }
+
+        .supporter-item {
+            padding: 12px 16px;
+            background: rgba(0, 173, 216, 0.05);
+            border-left: 3px solid var(--accent);
+            border-radius: 4px;
+            font-size: 15px;
+            color: var(--fg);
+        }
+
+        @media (max-width: 768px) {
+            .payment-section {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .supporters-list {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .coffee-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .coffee-gif {
+            width: 1em;
+            height: 1em;
+            display: inline-block;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div>
+                <a class="brand" href="./">
+                    <img class="brand-logo" src="/assets/img/icone.png" alt="Logo">
+                    Foi o Go que me deu
+                </a>
+            </div>
+
+            <nav>
+                <a href="./me-pague-um-cafe.html" class="coffee-link">
+                    <img src="/assets/img/cafe.gif" alt="Café" class="coffee-gif" onerror="this.style.display='none'">
+                    Me Pague um Café
+                </a>
+                <a href="./categorias.html">Categorias</a>
+                <a href="./sobre.html">Sobre</a>
+            </nav>
+        </header>
+
+        <main>
+            <article class="card">
+                <h1>☕ Me Pague um Café</h1>
+
+                <p>
+                    Se você aprecia o conteúdo que produzo e gostaria de apoiar este projeto, pode fazer uma doação via
+                    PIX ou Bitcoin.
+                    Cada contribuição, por menor que seja, me ajuda a continuar criando conteúdo de qualidade e
+                    investindo tempo nesta empreitada.
+                </p>
+
+                <p>
+                    Obrigado por estar aqui e por considerar apoiar este projeto! ❤️
+                </p>
+
+                <div class="payment-section">
+                    <div class="payment-method">
+                        <h3>PIX</h3>
+                        <p>Escaneie o QR code ou copie a chave<br>abaixo:</p>
+                        <div class="qr-code">
+                            <!-- Substitua a URL por seu QR code real -->
+                            <img src="/assets/img/pix-qrcode.png" alt="QR Code PIX">
+                        </div>
+                        <p>Chave PIX:</p>
+                        <div class="wallet-address" onclick="copyToClipboard(this)">
+                            <!-- Substitua pela sua chave PIX real -->
+                            25c5e25e-ce4c-4eb5-ae8e-5d38202444c0
+                        </div>
+                        <small style="color: var(--muted);">Clique na chave para copiar</small>
+                    </div>
+
+                    <div class="payment-method">
+                        <h3>Bitcoin</h3>
+                        <p>Escaneie o QR code ou copie o endereço abaixo:</p>
+                        <div class="qr-code">
+                            <!-- Substitua a URL por seu QR code real -->
+                            <img src="/assets/img/bitcoin-qrcode.png" alt="QR Code Bitcoin">
+                        </div>
+                        <p>Endereço Bitcoin:</p>
+                        <div class="wallet-address" onclick="copyToClipboard(this)">
+                            <!-- Substitua pelo seu endereço Bitcoin real -->
+                            bc1qt6txwqex0fjtma3sqyn2t3grem98ke2955udfk
+                        </div>
+                        <small style="color: var(--muted);">Clique no endereço para copiar</small>
+                    </div>
+                </div>
+
+                <div class="supporters">
+                    <h2>🙏 Apoiadores Premium</h2>
+                    <p>
+                        Agradecimento especial a todos que já contribuíram com mais de R$ 10,00 em doações via PIX!<br>
+                        Vocês
+                        são
+                        incríveis e fazem toda a diferença para manter este projeto vivo. Muito obrigado pelo apoio e
+                        confiança!
+                    </p>
+                    <div class="supporters-list">
+                        <!-- Adicione os nomes dos apoiadores aqui -->
+                        <div class="supporter-item">Rodrigo de Sousa</div>
+                        <div class="supporter-item">Ana Costa</div>
+                        <div class="supporter-item">Lucas Barbosa</div>
+                        <div class="supporter-item">Beatriz Gomes</div>
+                        <!-- Adicione mais apoiadores conforme necessário -->
+                    </div>
+                </div>
+
+            </article>
+        </main>
+
+        <footer>© <span id="year"></span> Foi o Go que me deu</footer>
+    </div>
+
+    <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+
+        function copyToClipboard(element) {
+            const text = element.textContent.trim();
+            navigator.clipboard.writeText(text).then(() => {
+                const originalText = element.textContent;
+                element.textContent = "✓ Copiado!";
+                setTimeout(() => {
+                    element.textContent = originalText;
+                }, 2000);
+            });
+        }
+    </script>
+</body>
+
+</html>

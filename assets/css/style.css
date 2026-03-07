@@ -277,3 +277,20 @@ table tbody tr:last-child td {
 .post-content {
     overflow-x: auto;
 }
+
+/* ============================= */
+/*      LINK DO CAFÉ             */
+/* ============================= */
+
+.coffee-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.coffee-gif {
+    width: 1em;
+    height: 1em;
+    display: inline-block;
+    vertical-align: middle;
+}
