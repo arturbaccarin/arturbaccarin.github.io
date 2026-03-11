@@ -278,5 +278,15 @@
         "author": "Artur Baccarin",
         "file": "posts/inicializando-maps-do-jeito-certo.html",
         "md": "posts/inicializando-maps-do-jeito-certo.md"
+    },
+    {
+        "id": "vazamento-de-memoria-em-maps",
+        "title": "Vazamento de memória em maps",
+        "date": "2026-03-11",
+        "category": "Go",
+        "excerpt": "Entenda como vazamentos de memória podem ocorrer em Go ao reutilizar maps e manter referências desnecessárias.",
+        "author": "Artur Baccarin",
+        "file": "posts/vazamento-de-memoria-em-maps.html",
+        "md": "posts/vazamento-de-memoria-em-maps.md"
     }
 ]
