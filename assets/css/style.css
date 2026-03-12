@@ -181,36 +181,76 @@ code {
 
 /* Responsividade para mobile */
 @media (max-width: 768px) {
-    .brand {
-        font-size: 28px;
-    }
-
-    .brand img.brand-logo {
-        width: 35px;
-        height: 35px;
-        margin-right: 6px;
+    .container {
+        padding: 16px;
     }
 
     header {
+        flex-direction: column;
+        align-items: flex-start;
         padding: 12px 0;
-        gap: 8px;
+        gap: 10px;
+    }
+
+    .brand {
+        font-size: 26px;
+    }
+
+    .brand img.brand-logo {
+        width: 34px;
+        height: 34px;
+        margin-right: 6px;
     }
 
     nav {
-        gap: 12px;
+        width: 100%;
+        gap: 10px;
         flex-wrap: wrap;
-        justify-content: flex-end;
+    }
+
+    nav a {
+        font-size: 14px;
+    }
+
+    article h1 {
+        font-size: 24px;
+    }
+
+    article h2 {
+        font-size: 18px;
+    }
+
+    article pre {
+        font-size: 13px;
+        padding: 12px;
+    }
+
+    .about-image img {
+        width: 60%;
+    }
+
+    table {
+        font-size: 0.85rem;
+    }
+
+    table th,
+    table td {
+        padding: 10px 12px;
     }
 }
 
 @media (max-width: 480px) {
+    .container {
+        padding: 12px;
+    }
+
     .brand {
-        font-size: 24px;
+        font-size: 22px;
     }
 
     .brand img.brand-logo {
-        width: 32px;
-        height: 32px;
+        width: 28px;
+        height: 28px;
         margin-right: 4px;
     }
 
@@ -218,8 +258,17 @@ code {
         gap: 8px;
     }
 
-    nav a {
-        font-size: 14px;
+    .card {
+        padding: 14px;
+        border-radius: 12px;
+    }
+
+    .about-image img {
+        width: 80%;
+    }
+
+    .post-image {
+        width: 100%;
     }
 }
 

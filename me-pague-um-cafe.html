@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>Me Pague um Café • Foi o Go que me deu</title>
     <link rel="icon" href="/assets/img/icone.png" type="image/svg+xml" />
-    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="/assets/css/style.css" />
     <style>
         .payment-section {
             display: grid;
@@ -104,23 +104,7 @@
 
 <body>
     <div class="container">
-        <header>
-            <div>
-                <a class="brand" href="./">
-                    <img class="brand-logo" src="/assets/img/icone.png" alt="Logo">
-                    Foi o Go que me deu
-                </a>
-            </div>
-
-            <nav>
-                <a href="./me-pague-um-cafe.html" class="coffee-link">
-                    <img src="/assets/img/cafe.gif" alt="Café" class="coffee-gif" onerror="this.style.display='none'">
-                    Me Pague um Café
-                </a>
-                <a href="./categorias.html">Categorias</a>
-                <a href="./sobre.html">Sobre</a>
-            </nav>
-        </header>
+        <header></header>
 
         <main>
             <article class="card">
@@ -142,12 +126,10 @@
                         <h3>PIX</h3>
                         <p>Escaneie o QR code ou copie a chave<br>abaixo:</p>
                         <div class="qr-code">
-                            <!-- Substitua a URL por seu QR code real -->
                             <img src="/assets/img/pix-qrcode.png" alt="QR Code PIX">
                         </div>
                         <p>Chave PIX:</p>
                         <div class="wallet-address" onclick="copyToClipboard(this)">
-                            <!-- Substitua pela sua chave PIX real -->
                             25c5e25e-ce4c-4eb5-ae8e-5d38202444c0
                         </div>
                         <small style="color: var(--muted);">Clique na chave para copiar</small>
@@ -157,12 +139,10 @@
                         <h3>Bitcoin</h3>
                         <p>Escaneie o QR code ou copie o endereço abaixo:</p>
                         <div class="qr-code">
-                            <!-- Substitua a URL por seu QR code real -->
                             <img src="/assets/img/bitcoin-qrcode.png" alt="QR Code Bitcoin">
                         </div>
                         <p>Endereço Bitcoin:</p>
                         <div class="wallet-address" onclick="copyToClipboard(this)">
-                            <!-- Substitua pelo seu endereço Bitcoin real -->
                             bc1qt6txwqex0fjtma3sqyn2t3grem98ke2955udfk
                         </div>
                         <small style="color: var(--muted);">Clique no endereço para copiar</small>
@@ -179,24 +159,24 @@
                         confiança!
                     </p>
                     <div class="supporters-list">
-                        <!-- Adicione os nomes dos apoiadores aqui -->
                         <div class="supporter-item">Rodrigo de Sousa</div>
                         <div class="supporter-item">Ana Costa</div>
                         <div class="supporter-item">Lucas Barbosa</div>
                         <div class="supporter-item">Beatriz Gomes</div>
-                        <!-- Adicione mais apoiadores conforme necessário -->
                     </div>
                 </div>
 
             </article>
         </main>
 
-        <footer>© <span id="year"></span> Foi o Go que me deu</footer>
+        <footer></footer>
     </div>
 
+    <script type="module">
+        import { initComponents } from '/assets/js/components.js';
+        await initComponents();
+    </script>
     <script>
-        document.getElementById("year").textContent = new Date().getFullYear();
-
         function copyToClipboard(element) {
             const text = element.textContent.trim();
             navigator.clipboard.writeText(text).then(() => {

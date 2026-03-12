@@ -6,7 +6,7 @@
         "category": "Arquitetura de software",
         "excerpt": "Entenda o que são padrões de projeto, suas características fundamentais, relações e como eles ajudam na tomada de decisões arquiteturais.",
         "author": "Artur Baccarin",
-        "file": "posts/o-que-sao-padroes-de-projeto-e-para-que-servem.html",
+        "file": "post.html?id=o-que-sao-padroes-de-projeto-e-para-que-servem",
         "md": "posts/o-que-sao-padroes-de-projeto-e-para-que-servem.md"
     },
     {
@@ -16,7 +16,7 @@
         "category": "Go",
         "excerpt": "Entenda o que é sombreamento (shadowing) em Go e como ele pode afetar seu código.",
         "author": "Artur Baccarin",
-        "file": "posts/voce-conhece-o-sombreamento-em-go.html",
+        "file": "post.html?id=voce-conhece-o-sombreamento-em-go",
         "md": "posts/voce-conhece-o-sombreamento-em-go.md"
     },
     {
@@ -26,7 +26,7 @@
         "category": "Arquitetura de software",
         "excerpt": "Entenda por que monolitos podem ser uma escolha inteligente em certos contextos.",
         "author": "Artur Baccarin",
-        "file": "posts/monolito-um-comeco-inteligente-nao-um-erro.html",
+        "file": "post.html?id=monolito-um-comeco-inteligente-nao-um-erro",
         "md": "posts/monolito-um-comeco-inteligente-nao-um-erro.md"
     },
     {
@@ -36,7 +36,7 @@
         "category": "Arquitetura de software",
         "excerpt": "Entenda o conceito de linha invisível e como ela pode ajudar a guiar a estrutura do seu código.",
         "author": "Artur Baccarin",
-        "file": "posts/a-linha-invisivel-que-guia-seu-codigo.html",
+        "file": "post.html?id=a-linha-invisivel-que-guia-seu-codigo",
         "md": "posts/a-linha-invisivel-que-guia-seu-codigo.md"
     },
     {
@@ -46,7 +46,7 @@
         "category": "Go",
         "excerpt": "Entenda o conceito de init em Go e como ele pode afetar o comportamento do seu programa.",
         "author": "Artur Baccarin",
-        "file": "posts/antes-do-main-existe-o-init.html",
+        "file": "post.html?id=antes-do-main-existe-o-init",
         "md": "posts/antes-do-main-existe-o-init.md"
     },
     {
@@ -56,7 +56,7 @@
         "category": "Arquitetura de software",
         "excerpt": "Entenda os benefícios e desafios do uso de microsserviços.",
         "author": "Artur Baccarin",
-        "file": "posts/microsservicos-dividir-para-conquistar-ou-complicar.html",
+        "file": "post.html?id=microsservicos-dividir-para-conquistar-ou-complicar",
         "md": "posts/microsservicos-dividir-para-conquistar-ou-complicar.md"
     },
     {
@@ -66,7 +66,7 @@
         "category": "Go",
         "excerpt": "Entenda como ordenar dados de forma elegante em Go usando o pacote sort.",
         "author": "Artur Baccarin",
-        "file": "posts/ordenando-com-elegancia-no-go-com-o-sort.html",
+        "file": "post.html?id=ordenando-com-elegancia-no-go-com-o-sort",
         "md": "posts/ordenando-com-elegancia-no-go-com-o-sort.md"
     },
     {
@@ -76,7 +76,7 @@
         "category": "Arquitetura de software",
         "excerpt": "Entenda como o conceito de cubo da escalabilidade pode ajudar a pensar em soluções escaláveis.",
         "author": "Artur Baccarin",
-        "file": "posts/descomplicando-o-cubo-da-escalabilidade-afk.html",
+        "file": "post.html?id=descomplicando-o-cubo-da-escalabilidade-afk",
         "md": "posts/descomplicando-o-cubo-da-escalabilidade-afk.md"
     },
     {
@@ -86,7 +86,7 @@
         "category": "Go",
         "excerpt": "Entenda como o estilo Google pode ajudar a escrever Go mais claro e legível.",
         "author": "Artur Baccarin",
-        "file": "posts/go-com-clareza-e-estilo-google.html",
+        "file": "post.html?id=go-com-clareza-e-estilo-google",
         "md": "posts/go-com-clareza-e-estilo-google.md"
     },
     {
@@ -96,7 +96,7 @@
         "category": "Go",
         "excerpt": "Entenda por que as interfaces em Go são mais adequadas para consumidores do que para fornecedores de código.",
         "author": "Artur Baccarin",
-        "file": "posts/interface-e-coisa-de-consumidor.html",
+        "file": "post.html?id=interface-e-coisa-de-consumidor",
         "md": "posts/interface-e-coisa-de-consumidor.md"
     },
     {
@@ -106,7 +106,7 @@
         "category": "Arquitetura de software",
         "excerpt": "Entenda o modelo 4+1 de visões na arquitetura de software.",
         "author": "Artur Baccarin",
-        "file": "posts/o-modelo-41-de-visoes-na-arquitetura-de-software.html",
+        "file": "post.html?id=o-modelo-41-de-visoes-na-arquitetura-de-software",
         "md": "posts/o-modelo-41-de-visoes-na-arquitetura-de-software.md"
     },
     {
@@ -116,7 +116,7 @@
         "category": "Go",
         "excerpt": "Entenda o problema de usar interface{} em Go e como isso pode afetar a clareza do seu código.",
         "author": "Artur Baccarin",
-        "file": "posts/any-interface-e-qualquer-coisa-e-esse-e-o-problema.html",
+        "file": "post.html?id=any-interface-e-qualquer-coisa-e-esse-e-o-problema",
         "md": "posts/any-interface-e-qualquer-coisa-e-esse-e-o-problema.md"
     },
     {
@@ -126,7 +126,7 @@
         "category": "Arquitetura de software",
         "excerpt": "Entenda o que é um serviço em microsserviços, como funciona sua API e por que o baixo acoplamento é essencial nessa arquitetura.",
         "author": "Artur Baccarin",
-        "file": "posts/definindo-servico-em-microsservicos.html",
+        "file": "post.html?id=definindo-servico-em-microsservicos",
         "md": "posts/definindo-servico-em-microsservicos.md"
     },
     {
@@ -136,7 +136,7 @@
         "category": "Go",
         "excerpt": "Aprenda o que são generics em Go, quando utilizá-los e como evitar armadilhas comuns ao trabalhar com tipos genéricos.",
         "author": "Artur Baccarin",
-        "file": "posts/descomplicando-generics.html",
+        "file": "post.html?id=descomplicando-generics",
         "md": "posts/descomplicando-generics.md"
     },
     {
@@ -146,7 +146,7 @@
         "category": "Go",
         "excerpt": "Descubra como embedded types funcionam em Go e quais cuidados tomar para evitar problemas de encapsulamento e design.",
         "author": "Artur Baccarin",
-        "file": "posts/atencao-ao-usar-embedded-types.html",
+        "file": "post.html?id=atencao-ao-usar-embedded-types",
         "md": "posts/atencao-ao-usar-embedded-types.md"
     },
     {
@@ -156,7 +156,7 @@
         "category": "Go",
         "excerpt": "Veja como simular parâmetros opcionais em Go usando structs, builder e function options de forma idiomática.",
         "author": "Artur Baccarin",
-        "file": "posts/lidando-com-parametros-opcionais.html",
+        "file": "post.html?id=lidando-com-parametros-opcionais",
         "md": "posts/lidando-com-parametros-opcionais.md"
     },
     {
@@ -166,7 +166,7 @@
         "category": "Go",
         "excerpt": "Dicas práticas para organizar projetos em Go de forma eficiente e escalável.",
         "author": "Artur Baccarin",
-        "file": "posts/dicas-para-organizacao-de-projetos.html",
+        "file": "post.html?id=dicas-para-organizacao-de-projetos",
         "md": "posts/dicas-para-organizacao-de-projetos.md"
     },
     {
@@ -176,7 +176,7 @@
         "category": "Go",
         "excerpt": "Evite pacotes genéricos como utils e aprenda a organizar seu código Go com pacotes coesos, claros e bem nomeados.",
         "author": "Artur Baccarin",
-        "file": "posts/nomeando-pacotes-utilitarios.html",
+        "file": "post.html?id=nomeando-pacotes-utilitarios",
         "md": "posts/nomeando-pacotes-utilitarios.md"
     },
     {
@@ -186,7 +186,7 @@
         "category": "Go",
         "excerpt": "Entenda os tipos inteiros em Go, como ocorre overflow e como prevenir erros com operações seguras e uso correto dos tipos.",
         "author": "Artur Baccarin",
-        "file": "posts/lidando-com-overflow-em-inteiros.html",
+        "file": "post.html?id=lidando-com-overflow-em-inteiros",
         "md": "posts/lidando-com-overflow-em-inteiros.md"
     },
     {
@@ -196,7 +196,7 @@
         "category": "Go",
         "excerpt": "Entenda como números de ponto flutuante funcionam em Go, suas limitações de precisão e como evitar erros em comparações e cálculos.",
         "author": "Artur Baccarin",
-        "file": "posts/os-desafios-dos-pontos-flutuantes.html",
+        "file": "post.html?id=os-desafios-dos-pontos-flutuantes",
         "md": "posts/os-desafios-dos-pontos-flutuantes.md"
     },
     {
@@ -206,7 +206,7 @@
         "category": "Go",
         "excerpt": "Diferenças entre arrays e slices em Go, abordando estrutura, comportamento em memória, crescimento dinâmico e impactos em performance.",
         "author": "Artur Baccarin",
-        "file": "posts/capacidade-dos-slices-explicada.html",
+        "file": "post.html?id=capacidade-dos-slices-explicada",
         "md": "posts/capacidade-dos-slices-explicada.md"
     },
     {
@@ -216,7 +216,7 @@
         "category": "Go",
         "excerpt": "Entenda como funciona o slicing em Go, os riscos do compartilhamento de arrays subjacentes e como o append pode impactar o comportamento e a performance.",
         "author": "Artur Baccarin",
-        "file": "posts/segredos-do-slicing-de-slices.html",
+        "file": "post.html?id=segredos-do-slicing-de-slices",
         "md": "posts/segredos-do-slicing-de-slices.md"
     },
     {
@@ -226,7 +226,7 @@
         "category": "Go",
         "excerpt": "Inicializar slices sem capacidade definida pode causar realocações desnecessárias e impactar a performance; entender quando definir capacidade ou comprimento ajuda a equilibrar eficiência e legibilidade.",
         "author": "Artur Baccarin",
-        "file": "posts/como-nao-inicializar-slices.html",
+        "file": "post.html?id=como-nao-inicializar-slices",
         "md": "posts/como-nao-inicializar-slices.md"
     },
     {
@@ -236,7 +236,7 @@
         "category": "Go",
         "excerpt": "Entenda a diferença entre slices nulos e vazios em Go, seus impactos em memória, performance e como lidar corretamente em diferentes cenários.",
         "author": "Artur Baccarin",
-        "file": "posts/slice-nulo-vs-slice-vazio.html",
+        "file": "post.html?id=slice-nulo-vs-slice-vazio",
         "md": "posts/slice-nulo-vs-slice-vazio.md"
     },
     {
@@ -246,7 +246,7 @@
         "category": "Go",
         "excerpt": "Aprenda a usar corretamente a função copy em Go, evitando erros comuns com slices, compartilhamento de memória e efeitos colaterais com append.",
         "author": "Artur Baccarin",
-        "file": "posts/armadilhas-comuns-ao-copiar-slices.html",
+        "file": "post.html?id=armadilhas-comuns-ao-copiar-slices",
         "md": "posts/armadilhas-comuns-ao-copiar-slices.md"
     },
     {
@@ -256,7 +256,7 @@
         "category": "System design",
         "excerpt": "Evolução arquitetural de sistemas: do monólito a uma arquitetura distribuída com load balancer, cache, filas, sharding e observabilidade para escalar aplicações.",
         "author": "Artur Baccarin",
-        "file": "posts/da-aplicacao-monolitica-a-escala-de-milhoes-de-usuarios.html",
+        "file": "post.html?id=da-aplicacao-monolitica-a-escala-de-milhoes-de-usuarios",
         "md": "posts/da-aplicacao-monolitica-a-escala-de-milhoes-de-usuarios.md"
     },
     {
@@ -266,7 +266,7 @@
         "category": "Go",
         "excerpt": "Entenda como vazamentos de memória podem ocorrer em Go ao reutilizar slices e manter referências desnecessárias, e veja como evitá-los com cópia de dados e boas práticas.",
         "author": "Artur Baccarin",
-        "file": "posts/vazamento-de-memoria-em-slices.html",
+        "file": "post.html?id=vazamento-de-memoria-em-slices",
         "md": "posts/vazamento-de-memoria-em-slices.md"
     },
     {
@@ -276,7 +276,7 @@
         "category": "Go",
         "excerpt": "Entenda como inicializar maps em Go corretamente garantindo eficiência de performance.",
         "author": "Artur Baccarin",
-        "file": "posts/inicializando-maps-do-jeito-certo.html",
+        "file": "post.html?id=inicializando-maps-do-jeito-certo",
         "md": "posts/inicializando-maps-do-jeito-certo.md"
     },
     {
@@ -286,7 +286,7 @@
         "category": "Go",
         "excerpt": "Entenda como vazamentos de memória podem ocorrer em Go ao reutilizar maps e manter referências desnecessárias.",
         "author": "Artur Baccarin",
-        "file": "posts/vazamento-de-memoria-em-maps.html",
+        "file": "post.html?id=vazamento-de-memoria-em-maps",
         "md": "posts/vazamento-de-memoria-em-maps.md"
     }
 ]

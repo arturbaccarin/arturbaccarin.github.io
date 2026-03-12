@@ -1,5 +1,7 @@
+import { initComponents } from './components.js';
+
 async function loadPosts() {
-  const res = await fetch("data/posts.json");
+  const res = await fetch("/data/posts.json");
   if (!res.ok) throw new Error("Não consegui carregar data/posts.json");
   return await res.json();
 }
@@ -19,7 +21,7 @@ function postCard(post) {
 }
 
 async function main() {
-  document.getElementById("year").textContent = new Date().getFullYear();
+  await initComponents();
 
   const listEl = document.getElementById("postList");
   const posts = await loadPosts();
