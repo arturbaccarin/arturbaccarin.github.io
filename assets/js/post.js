@@ -1,6 +1,7 @@
 /* post loader: suporta carregar Markdown + metadata via /data/posts.json */
 
 import { mdToHtml, escapeHtml } from './mdToHtml.js';
+import { initComponents } from './components.js';
 
 function slugFromPath() {
     const parts = window.location.pathname.split('/').filter(Boolean);
@@ -12,7 +13,7 @@ function slugFromPath() {
 }
 
 function getId() {
-    return slugFromPath() || new URLSearchParams(window.location.search).get('id');
+    return new URLSearchParams(window.location.search).get('id') || slugFromPath();
 }
 
 async function loadPosts() {
@@ -48,7 +49,7 @@ function formatDatePt(s) {
 }
 
 async function main() {
-    document.getElementById('year').textContent = new Date().getFullYear();
+    await initComponents();
 
     const id = getId();
     if (!id) throw new Error('Faltou o parâmetro ?id=... na URL ou o arquivo não está em /posts/<slug>.html');
@@ -58,6 +59,8 @@ async function main() {
     if (!post) throw new Error('Post não encontrado: ' + id);
 
     document.title = post.title;
+    const canonical = document.getElementById('canonical');
+    if (canonical) canonical.href = window.location.href;
     document.getElementById('title').textContent = post.title;
     document.getElementById('meta').innerHTML = `
     Escrito por ${escapeHtml(post.author || 'Autor desconhecido')} em ${formatDatePt(post.date)}
