@@ -13,7 +13,7 @@ function slugFromPath() {
 }
 
 function getId() {
-    return new URLSearchParams(window.location.search).get('id') || slugFromPath();
+    return slugFromPath();
 }
 
 async function loadPosts() {
