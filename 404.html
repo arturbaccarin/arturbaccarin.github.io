@@ -41,12 +41,13 @@
     <script type="module">
         import { initComponents } from '/assets/js/components.js';
 
+        await initComponents();
+
         if (/^\/posts\/[^/]+$/.test(window.location.pathname)) {
             document.getElementById('post-main').style.display = '';
             import('/assets/js/post.js');
         } else {
             document.getElementById('notfound-main').style.display = '';
-            await initComponents();
         }
     </script>
 </body>
