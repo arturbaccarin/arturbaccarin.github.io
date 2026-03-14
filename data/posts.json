@@ -288,5 +288,15 @@
         "author": "Artur Baccarin",
         "file": "posts/vazamento-de-memoria-em-maps",
         "md": "posts/vazamento-de-memoria-em-maps.md"
+    },
+    {
+        "id": "estrategias-de-rate-limiting",
+        "title": "Estratégias de rate limiting",
+        "date": "2026-03-14",
+        "category": "System design",
+        "excerpt": "Conheça as estratégias de rate limiting para controlar o tráfego de requisições e proteger suas aplicações.",
+        "author": "Artur Baccarin",
+        "file": "posts/estrategias-de-rate-limiting",
+        "md": "posts/estrategias-de-rate-limiting.md"
     }
 ]
