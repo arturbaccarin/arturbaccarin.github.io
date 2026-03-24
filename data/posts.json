@@ -298,5 +298,15 @@
         "author": "Artur Baccarin",
         "file": "posts/estrategias-de-rate-limiting",
         "md": "posts/estrategias-de-rate-limiting.md"
+    },
+    {
+        "id": "comparando-valores",
+        "title": "Comparando valores",
+        "date": "2026-03-24",
+        "category": "Go",
+        "excerpt": "Comparar valores em Go vai além do ==, exigindo entender limitações e alternativas como reflect.DeepEqual e comparações customizadas para garantir código correto e eficiente.",
+        "author": "Artur Baccarin",
+        "file": "posts/comparando-valores",
+        "md": "posts/comparando-valores.md"
     }
 ]
