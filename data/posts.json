@@ -308,5 +308,15 @@
         "author": "Artur Baccarin",
         "file": "posts/comparando-valores",
         "md": "posts/comparando-valores.md"
+    },
+    {
+        "id": "cuidado-com-loops-e-copias-de-valores",
+        "title": "Cuidado com loops e cópias de valores",
+        "date": "2026-04-02",
+        "category": "Go",
+        "excerpt": "Loops em Go podem enganar: ao iterar sobre structs, você pode estar modificando apenas cópias e não os valores originais.",
+        "author": "Artur Baccarin",
+        "file": "posts/cuidado-com-loops-e-copias-de-valores",
+        "md": "posts/cuidado-com-loops-e-copias-de-valores.md"
     }
 ]
