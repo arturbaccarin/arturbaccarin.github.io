@@ -318,5 +318,15 @@
         "author": "Artur Baccarin",
         "file": "posts/cuidado-com-loops-e-copias-de-valores",
         "md": "posts/cuidado-com-loops-e-copias-de-valores.md"
+    },
+    {
+        "id": "cuidado-com-ponteiros-no-range",
+        "title": "Cuidado com ponteiros no range",
+        "date": "2026-04-10",
+        "category": "Go",
+        "excerpt": "Um erro sutil no uso de range em Go pode fazer todos os seus ponteiros apontarem para o mesmo valor, gerando bugs difíceis de identificar e entender.",
+        "author": "Artur Baccarin",
+        "file": "posts/cuidado-com-ponteiros-no-range",
+        "md": "posts/cuidado-com-ponteiros-no-range.md"
     }
 ]
