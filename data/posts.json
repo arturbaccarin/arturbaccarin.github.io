@@ -328,5 +328,15 @@
         "author": "Artur Baccarin",
         "file": "posts/cuidado-com-ponteiros-no-range",
         "md": "posts/cuidado-com-ponteiros-no-range.md"
+    },
+        {
+        "id": "consistent-hashing-para-sistemas-distribuidos",
+        "title": "Consistent hashing para sistemas distribuídos",
+        "date": "2026-04-18",
+        "category": "System design",
+        "excerpt": "Consistent hashing é uma técnica de distribuição de dados que minimiza a redistribuição de chaves quando servidores são adicionados ou removidos.",
+        "author": "Artur Baccarin",
+        "file": "posts/consistent-hashing-para-sistemas-distribuidos",
+        "md": "posts/consistent-hashing-para-sistemas-distribuidos.md"
     }
 ]
