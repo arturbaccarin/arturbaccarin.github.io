@@ -329,7 +329,7 @@
         "file": "posts/cuidado-com-ponteiros-no-range",
         "md": "posts/cuidado-com-ponteiros-no-range.md"
     },
-        {
+    {
         "id": "consistent-hashing-para-sistemas-distribuidos",
         "title": "Consistent hashing para sistemas distribuídos",
         "date": "2026-04-18",
@@ -338,5 +338,15 @@
         "author": "Artur Baccarin",
         "file": "posts/consistent-hashing-para-sistemas-distribuidos",
         "md": "posts/consistent-hashing-para-sistemas-distribuidos.md"
+    },
+    {
+        "id": "armadilhas-na-ordenacao-e-iteracao-em-maps",
+        "title": "Armadilhas na ordenação e iteração em maps",
+        "date": "2026-04-25",
+        "category": "Go",
+        "excerpt": "Entenda as armadilhas comuns na ordenação e iteração em maps, evitando erros sutis.",
+        "author": "Artur Baccarin",
+        "file": "posts/armadilhas-na-ordenacao-e-iteracao-em-maps",
+        "md": "posts/armadilhas-na-ordenacao-e-iteracao-em-maps.md"
     }
 ]
