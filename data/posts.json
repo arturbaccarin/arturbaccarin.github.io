@@ -348,5 +348,15 @@
         "author": "Artur Baccarin",
         "file": "posts/armadilhas-na-ordenacao-e-iteracao-em-maps",
         "md": "posts/armadilhas-na-ordenacao-e-iteracao-em-maps.md"
+    },
+    {
+        "id": "por-que-esse-break-nao-funciona",
+        "title": "Por que esse break não funciona?",
+        "date": "2026-05-02",
+        "category": "Go",
+        "excerpt": "Descubra por que o uso de break pode não funcionar como esperado em certos contextos em Go.",
+        "author": "Artur Baccarin",
+        "file": "posts/por-que-esse-break-nao-funciona",
+        "md": "posts/por-que-esse-break-nao-funciona.md"
     }
 ]
