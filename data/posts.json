@@ -358,5 +358,15 @@
         "author": "Artur Baccarin",
         "file": "posts/por-que-esse-break-nao-funciona",
         "md": "posts/por-que-esse-break-nao-funciona.md"
+    },
+    {
+        "id": "explicando-teorema-cap",
+        "title": "Explicando Teorema CAP",
+        "date": "2026-05-10",
+        "category": "System design",
+        "excerpt": "Entenda o Teorema CAP e suas implicações em sistemas distribuídos.",
+        "author": "Artur Baccarin",
+        "file": "posts/explicando-teorema-cap",
+        "md": "posts/explicando-teorema-cap.md"
     }
 ]
