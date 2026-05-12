@@ -51,7 +51,7 @@ Quando isso acontece, alguns nós deixam de se comunicar entre si. Esse cenário
 
 ---
 
-# Entendendo Uma Partição de Rede
+# Entendendo uma partição de rede
 
 Imagine um sistema distribuído composto por três nós: n1, n2 e n3.
 
