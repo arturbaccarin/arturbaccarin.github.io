@@ -368,5 +368,15 @@
         "author": "Artur Baccarin",
         "file": "posts/explicando-teorema-cap",
         "md": "posts/explicando-teorema-cap.md"
+    },
+    {
+        "id": "o-que-e-rune",
+        "title": "O que é Rune?",
+        "date": "2026-05-17",
+        "category": "Go",
+        "excerpt": "Entenda o que é uma rune em Go e como ela representa caracteres Unicode.",
+        "author": "Artur Baccarin",
+        "file": "posts/o-que-e-rune",
+        "md": "posts/o-que-e-rune.md"
     }
 ]
