@@ -298,6 +298,74 @@ ol ol li {
     /* ajuste se quiser mais ou menos */
 }
 
+/* ===== Busca ===== */
+.search-bar {
+    margin-bottom: 4px;
+    margin-top: 24px;
+}
+
+.search-bar input[type="search"] {
+    width: 100%;
+    padding: 10px 16px;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    background: var(--card-bg);
+    color: var(--fg);
+    font-size: 15px;
+    outline: none;
+    transition: border-color .2s;
+}
+
+.search-bar input[type="search"]:focus {
+    border-color: var(--accent);
+}
+
+/* ===== Paginação ===== */
+.pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    padding: 12px 0 24px;
+    flex-wrap: wrap;
+}
+
+.page-btn {
+    min-width: 36px;
+    height: 36px;
+    padding: 0 10px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background: var(--card-bg);
+    color: var(--fg);
+    font-size: 14px;
+    cursor: pointer;
+    transition: all .2s;
+}
+
+.page-btn:hover:not([disabled]) {
+    border-color: var(--accent);
+    color: var(--accent);
+}
+
+.page-btn.active {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: #fff;
+    font-weight: 600;
+}
+
+.page-btn[disabled] {
+    opacity: 0.4;
+    cursor: default;
+}
+
+.page-ellipsis {
+    color: var(--muted);
+    padding: 0 4px;
+    line-height: 36px;
+}
+
 .post-image {
     width: 85%;
     max-width: 750px;
