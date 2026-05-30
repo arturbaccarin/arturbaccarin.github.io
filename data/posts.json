@@ -378,5 +378,15 @@
         "author": "Artur Baccarin",
         "file": "posts/o-que-e-rune",
         "md": "posts/o-que-e-rune.md"
+    },
+    {
+        "id": "trim-right-vs-trim-suffix",
+        "title": "TrimRight vs TrimSuffix",
+        "date": "2026-05-30",
+        "category": "Go",
+        "excerpt": "Entenda a diferença entre TrimRight e TrimSuffix em Go e quando usar cada um.",
+        "author": "Artur Baccarin",
+        "file": "posts/trim-right-vs-trim-suffix",
+        "md": "posts/trim-right-vs-trim-suffix.md"
     }
 ]
