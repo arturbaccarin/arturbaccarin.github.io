@@ -388,5 +388,15 @@
         "author": "Artur Baccarin",
         "file": "posts/trim-right-vs-trim-suffix",
         "md": "posts/trim-right-vs-trim-suffix.md"
+    },
+    {
+        "id": "otimizando-concatenacao-de-strings",
+        "title": "Otimizando concatenação de strings",
+        "date": "2026-06-07",
+        "category": "Go",
+        "excerpt": "Aprenda técnicas para otimizar a concatenação de strings em Go, melhorando a performance do seu código.",
+        "author": "Artur Baccarin",
+        "file": "posts/otimizando-concatenacao-de-strings",
+        "md": "posts/otimizando-concatenacao-de-strings.md"
     }
 ]
