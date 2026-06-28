@@ -398,5 +398,15 @@
         "author": "Artur Baccarin",
         "file": "posts/otimizando-concatenacao-de-strings",
         "md": "posts/otimizando-concatenacao-de-strings.md"
+    },
+    {
+        "id": "memory-leak-em-strings",
+        "title": "Memory Leak em Strings",
+        "date": "2026-06-28",
+        "category": "Go",
+        "excerpt": "Aprenda sobre memory leaks em strings em Go e como evitá-los.",
+        "author": "Artur Baccarin",
+        "file": "posts/memory-leak-em-strings",
+        "md": "posts/memory-leak-em-strings.md"
     }
 ]
