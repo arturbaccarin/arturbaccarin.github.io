@@ -408,5 +408,15 @@
         "author": "Artur Baccarin",
         "file": "posts/memory-leak-em-strings",
         "md": "posts/memory-leak-em-strings.md"
+    },
+    {
+        "id": "value-receiver-ou-pointer-receiver",
+        "title": "Receivers por valor ou por ponteiro",
+        "date": "2026-07-15",
+        "category": "Go",
+        "excerpt": "Aprenda sobre memory leaks em strings em Go e como evitá-los.",
+        "author": "Artur Baccarin",
+        "file": "posts/value-receiver-ou-pointer-receiver",
+        "md": "posts/value-receiver-ou-pointer-receiver.md"
     }
 ]
