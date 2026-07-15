@@ -410,13 +410,13 @@
         "md": "posts/memory-leak-em-strings.md"
     },
     {
-        "id": "receiver-por-valor-ou-por-pointeiro",
+        "id": "receivers-por-valor-ou-por-pointeiro",
         "title": "Receivers por valor ou por ponteiro",
         "date": "2026-07-15",
         "category": "Go",
         "excerpt": "Aprenda sobre memory leaks em strings em Go e como evitá-los.",
         "author": "Artur Baccarin",
-        "file": "posts/receiver-por-valor-ou-por-pointeiro",
-        "md": "posts/receiver-por-valor-ou-por-pointeiro.md"
+        "file": "posts/receivers-por-valor-ou-por-pointeiro",
+        "md": "posts/receivers-por-valor-ou-por-pointeiro.md"
     }
 ]
