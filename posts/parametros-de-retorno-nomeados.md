@@ -96,12 +96,61 @@ Nesse exemplo, os nomes não aumentam de forma significativa a legibilidade. O g
 
 O *naked return* é considerado aceitável em funções curtas. Em funções mais longas, ele pode prejudicar a legibilidade, pois o leitor precisa lembrar os valores das variáveis de retorno ao longo de todo o corpo da função. Também é recomendável manter consistência dentro do escopo de uma função, utilizando apenas *naked returns* ou apenas retornos com argumentos.
 
+## Efeitos colaterais não intencionais
+
+Como os retornos nomeados são inicializados com o *zero value*, seu uso pode causar bugs sutis quando não há cuidado. Considere um método que retorna a largura e a altura de uma imagem a partir de um caminho. Por retornar dois `int`, o método usa retornos nomeados para tornar explícito o significado de cada valor. Ele primeiro valida a existência do arquivo e, em seguida, verifica o `context.Context` recebido para garantir que não foi cancelado e que o prazo não expirou.
+
+Um `context.Context` pode carregar um sinal de cancelamento ou um *deadline*. Essas condições são verificadas chamando o método `Err` e testando se o erro retornado é diferente de `nil`.
+
+```go
+func (r reader) dimensions(ctx context.Context, path string) (width, height int, err error) {
+	exists := r.fileExists(path)
+	if !exists {
+		return 0, 0, errors.New("file not found")
+	}
+
+	if ctx.Err() != nil {
+		return 0, 0, err
+	}
+
+	// Lê e retorna as dimensões
+}
+```
+
+No bloco `if ctx.Err() != nil`, o valor retornado é `err`, mas nenhum valor foi atribuído a essa variável. Ela continua com o *zero value* do tipo `error`, que é `nil`. Portanto, mesmo com o contexto cancelado, o método retorna um erro `nil`.
+
+Além disso, o código compila justamente porque `err` foi inicializada pelo uso de retornos nomeados. Sem o nome, o compilador reportaria um erro indicando que a referência a `err` não foi resolvida.
+
+### Atribuindo o erro do contexto
+
+Uma correção possível é atribuir o resultado de `ctx.Err()` a uma variável `err` antes de retorná-la.
+
+```go
+if err := ctx.Err(); err != nil {
+	return 0, 0, err
+}
+```
+
+O código continua retornando `err`, mas agora ela recebe o resultado de `ctx.Err()` na própria instrução `if`. Nesse exemplo, a variável `err` declarada no `if` faz sombreamento da variável de retorno de mesmo nome, ou seja, é uma variável distinta que existe apenas no escopo do bloco.
+
+### Utilizando um naked return
+
+Outra opção é usar um *naked return*.
+
+```go
+if err = ctx.Err(); err != nil {
+	return
+}
+```
+
+Nesse caso, o operador `=` atribui o resultado à variável de retorno `err`, e o `return` sem argumentos devolve os valores atuais dos resultados. No entanto, essa alternativa viola a regra de não misturar *naked returns* com retornos com argumentos na mesma função, já que os demais `return` do método informam valores explicitamente. Por isso, a primeira opção é a mais adequada. Usar retornos nomeados não implica necessariamente usar *naked returns*, e em alguns casos os nomes servem apenas para tornar a assinatura mais clara.
+
 ## Conclusão
 
 Parâmetros de retorno nomeados em Go são variáveis inicializadas com o *zero value* que permitem o uso de *naked returns*. Seu principal benefício está em documentar a assinatura, especialmente em interfaces e em funções que retornam múltiplos valores do mesmo tipo. Em outros casos, como funções que retornam apenas um `error`, o nome não acrescenta informação.
 
 Também existe o uso por conveniência, em que a inicialização automática reduz o código, mas pode dificultar a leitura inicial. Os *naked returns* devem ficar restritos a funções curtas e ser usados de forma consistente dentro da função. De modo geral, os retornos nomeados devem ser usados com moderação e apenas quando houver um benefício claro.
 
-Vale observar que o uso descuidado de retornos nomeados pode gerar efeitos colaterais e consequências não intencionais, tema que merece uma análise própria.
+Por fim, como cada retorno nomeado é inicializado com o *zero value*, o uso descuidado pode gerar bugs sutis e nem sempre fáceis de identificar durante a leitura do código. Um exemplo é retornar uma variável `err` à qual nenhum valor foi atribuído, o que resulta em um erro `nil` mesmo diante de uma falha. Nessas situações, atribuir o erro em uma instrução `if` mantém o código consistente, e convém ter cautela ao usar retornos nomeados para evitar efeitos colaterais.
 
 **Referência**: HARSANYI, Teiva. **100 Go mistakes and how to avoid them**. Shelter Island: Manning, 2022.
