@@ -418,5 +418,15 @@
         "author": "Artur Baccarin",
         "file": "posts/receivers-por-valor-ou-por-pointeiro",
         "md": "posts/receivers-por-valor-ou-por-pointeiro.md"
+    },
+    {
+        "id": "parametros-de-retorno-nomeados",
+        "title": "Parâmetros de retorno nomeados",
+        "date": "2026-09-26",
+        "category": "Go",
+        "excerpt": "Entenda quando os named result parameters melhoram a legibilidade em Go e quando é melhor evitá-los.",
+        "author": "Artur Baccarin",
+        "file": "posts/parametros-de-retorno-nomeados",
+        "md": "posts/parametros-de-retorno-nomeados.md"
     }
 ]
