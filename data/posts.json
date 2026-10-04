@@ -428,5 +428,15 @@
         "author": "Artur Baccarin",
         "file": "posts/parametros-de-retorno-nomeados",
         "md": "posts/parametros-de-retorno-nomeados.md"
+    },
+    {
+        "id": "retornando-um-receiver-nil",
+        "title": "Retornando um receiver nil",
+        "date": "2026-10-04",
+        "category": "Go",
+        "excerpt": "Entenda por que retornar um ponteiro nulo como interface em Go resulta em um valor não nulo e como evitar esse erro.",
+        "author": "Artur Baccarin",
+        "file": "posts/retornando-um-receiver-nil",
+        "md": "posts/retornando-um-receiver-nil.md"
     }
 ]
