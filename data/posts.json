@@ -438,5 +438,15 @@
         "author": "Artur Baccarin",
         "file": "posts/retornando-um-receiver-nil",
         "md": "posts/retornando-um-receiver-nil.md"
+    },
+    {
+        "id": "determinacao-de-argumentos-e-receivers-no-defer",
+        "title": "Determinação de argumentos e receivers no defer",
+        "date": "2026-10-17",
+        "category": "Go",
+        "excerpt": "Entenda quando os argumentos e o receiver de uma chamada adiada com defer são determinados e como lidar com esse comportamento.",
+        "author": "Artur Baccarin",
+        "file": "posts/determinacao-de-argumentos-e-receivers-no-defer",
+        "md": "posts/determinacao-de-argumentos-e-receivers-no-defer.md"
     }
 ]
